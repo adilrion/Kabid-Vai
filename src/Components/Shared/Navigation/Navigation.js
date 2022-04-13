@@ -11,7 +11,7 @@ const Navigation = () => {
 
   return (
     <section>
-      <div className="grid grid-cols-5">
+      <div className="md:grid grid-cols-5">
         <div className="col-span-1">
           <div className="rounded-r bg-white xl:hidden flex justify-between w-full p-5 items-center ">
             <div className="flex justify-between  items-center space-x-3">
@@ -97,7 +97,7 @@ const Navigation = () => {
             id="Main"
             className={`${
               show ? "translate-x-0" : "-translate-x-full"
-            } xl:rounded-r transform  xl:translate-x-0  ease-in-out transition duration-500  min-h-screen sm:w-64 bg-white `}
+            } xl:rounded-r transform  xl:translate-x-0  ease-in-out transition duration-500 absolute  min-h-screen w-[250px] bg-white `}
           >
             <div className="hidden xl:flex flex-col p-5  border-gray-600 border-b">
               <div className="rainbow">
