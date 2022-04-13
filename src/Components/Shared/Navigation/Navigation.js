@@ -11,8 +11,8 @@ const Navigation = () => {
 
   return (
     <section>
-      <div className="md:grid grid-cols-5">
-        <div className="col-span-1">
+      <div className="md:grid grid-cols-12 gap-x-14">
+        <div className="col-span-2">
           <div className="rounded-r bg-white xl:hidden flex justify-between w-full p-5 items-center ">
             <div className="flex justify-between  items-center space-x-3">
               <h1 className="leading-6 text-gray-900">Kabid Hassan</h1>
@@ -169,7 +169,7 @@ const Navigation = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-4">
+        <div className="col-span-10">
           <Routes>
             <Route path="/" element={<Works />} />
             <Route path="works" element={<Works />} />
