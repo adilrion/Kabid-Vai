@@ -10,7 +10,7 @@ function App() {
         <Routes>
           <Route index element={<Version />} />
           <Route path="/" elem ent={<Version />} />
-          <Route path="v-english" element={<Home />} />
+          <Route path="v-english/*" element={<Home />} />
           <Route path="v-bangla" element={<VersionBangla />} />
         </Routes>
       </BrowserRouter>
