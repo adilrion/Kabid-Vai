@@ -13,7 +13,7 @@ const Version = () => {
               <img
                 src={KabidImg}
                 alt="Images of Kabid Hossain"
-                className="w-[200px] h-[200px] text-center"
+                className="w-[100%] h-[100%] img text-center"
               />
             </div>
             <h1>Kabid hossain</h1>

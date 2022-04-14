@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, Outlet, Route, Routes } from "react-router-dom";
 import "../../Home/Version/Version.css";
+import "./Navigation.css";
 import { BsFacebook, BsInstagram, BsPinterest, BsGithub } from "react-icons/bs";
 import KabidImg from "../../Shared/Images/Kabid.jpg";
 import Works from "../../Home/Works/Works";
@@ -11,9 +12,9 @@ const Navigation = () => {
 
   return (
     <section>
-      <div className="md:grid grid-cols-12 gap-x-14">
+      <div className="md:grid grid-cols-12 gap-x-2">
         <div className="col-span-2">
-          <div className="rounded-r bg-white xl:hidden flex justify-between w-full p-5 items-center ">
+          <div className="rounded-r bg-white xl:hidden flex justify-between w-full p-5 items-center">
             <div className="flex justify-between  items-center space-x-3">
               <h1 className="leading-6 text-gray-900">Kabid Hassan</h1>
             </div>
@@ -96,15 +97,15 @@ const Navigation = () => {
           <div
             id="Main"
             className={`${
-              show ? "translate-x-0" : "-translate-x-full"
-            } xl:rounded-r transform  xl:translate-x-0  ease-in-out transition duration-500 absolute  min-h-screen w-[250px] bg-white `}
+              show ? "translate-x-0" : "-translate-x-full "
+            } xl:rounded-r transform  xl:translate-x-0  ease-in-out transition duration-500  absolute  min-h-screen nav  bg-white md:m-2 md:sticky md:top-2 z-50`}
           >
             <div className="hidden xl:flex flex-col p-5  border-gray-600 border-b">
               <div className="rainbow">
                 <img
                   src={KabidImg}
                   alt="Images of Kabid Hassan"
-                  className="w-[200px] h-[200px] text-center"
+                  className="w-[100%] h-[100%] img text-center"
                 />
               </div>
               <h1 className="leading-6 text-gray-900 text-center py-5">
@@ -115,7 +116,7 @@ const Navigation = () => {
                 velit.
               </p>
             </div>
-            {/* grid w-full h-[100vh] content-between */}
+
             <div className="">
               <div className="flex flex-col justify-start items-center  p-5 w-full  space-y-3 pb-5">
                 <Link
@@ -162,7 +163,7 @@ const Navigation = () => {
                     <BsPinterest />
                   </Link>
                 </div>
-                <div className="text-center mt-5 text-sm text-gray-400">
+                <div className="text-center mt-5 text-sm  text-gray-400">
                   <p>Copyright © 2022 Kabid Hassan</p>
                 </div>
               </div>

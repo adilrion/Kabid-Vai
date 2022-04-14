@@ -58,13 +58,11 @@ const Works = () => {
   return (
     <div className="">
       <div className="">
-        <nav className=" pb-5 pt-2 w-full flex justify-center">
-          <h1 className="border-solid border-b-4 border-gray-900 px-20">
-            Recent Works{" "}
-          </h1>
+        <nav className="flex justify-center bg-white m-2 rounded">
+          <h1 className=" py-3 px-20">Recent Works </h1>
         </nav>
 
-        <div className="grid grid-cols-4 grid-flow-row-dense gap-1 md:gap-3 px-2 relative">
+        <div className="grid grid-cols-4 grid-flow-row-dense gap-1 md:gap-3 relative m-2">
           {library.map((data, index, array) => (
             <div
               className={`${
@@ -74,7 +72,7 @@ const Works = () => {
               <img
                 src={data.img}
                 alt="#"
-                className="w-full h-full object-center object-cover"
+                className="w-full h-full object-center object-cover rounded"
               />
             </div>
           ))}
