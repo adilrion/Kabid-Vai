@@ -2,9 +2,14 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div>
-      <h2>this is contact page</h2>
-    </div>
+    <section>
+      <nav className="flex justify-center bg-white m-2  rounded">
+        <h1 className=" py-3 text-[50px]">
+          <span className="text-[#fbb300] ">Contact!</span> Me
+        </h1>
+      </nav>
+      <div></div>
+    </section>
   );
 };
 

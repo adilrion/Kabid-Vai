@@ -38,26 +38,41 @@ const library = [
     img: "https://media.istockphoto.com/photos/hot-air-balloons-flying-over-the-botan-canyon-in-turkey-picture-id1297349747?b=1&k=20&m=1297349747&s=170667a&w=0&h=oH31fJty_4xWl_JQ4OIQWZKP8C6ji9Mz7L4XmEnbqRU=",
   },
   {
-    id: "7",
+    id: "8",
     title: "S",
     img: "https://media.istockphoto.com/photos/freedom-chains-that-transform-into-birds-charge-concept-picture-id1322104312?b=1&k=20&m=1322104312&s=170667a&w=0&h=VQyPkFkMKmo0e4ixjhiOLjiRs_ZiyKR_4SAsagQQdkk=",
   },
   {
-    id: "7",
+    id: "9",
     title: "S",
     img: "https://media.istockphoto.com/photos/hot-air-balloons-flying-over-the-botan-canyon-in-turkey-picture-id1297349747?b=1&k=20&m=1297349747&s=170667a&w=0&h=oH31fJty_4xWl_JQ4OIQWZKP8C6ji9Mz7L4XmEnbqRU=",
   },
   {
-    id: "7",
+    id: "10",
     title: "S",
     img: "https://images.freeimages.com/images/large-previews/5a3/flowers-1375015.jpg",
+  },
+  {
+    id: "11",
+    title: "S",
+    img: "https://media.istockphoto.com/photos/hot-air-balloons-flying-over-the-botan-canyon-in-turkey-picture-id1297349747?b=1&k=20&m=1297349747&s=170667a&w=0&h=oH31fJty_4xWl_JQ4OIQWZKP8C6ji9Mz7L4XmEnbqRU=",
+  },
+  {
+    id: "12",
+    title: "Z",
+    img: "https://media.istockphoto.com/photos/hot-air-balloons-flying-over-the-botan-canyon-in-turkey-picture-id1297349747?b=1&k=20&m=1297349747&s=170667a&w=0&h=oH31fJty_4xWl_JQ4OIQWZKP8C6ji9Mz7L4XmEnbqRU=",
+  },
+  {
+    id: "13",
+    title: "A",
+    img: "https://media.istockphoto.com/photos/freedom-chains-that-transform-into-birds-charge-concept-picture-id1322104312?b=1&k=20&m=1322104312&s=170667a&w=0&h=VQyPkFkMKmo0e4ixjhiOLjiRs_ZiyKR_4SAsagQQdkk=",
   },
 ];
 
 const Works = () => {
   return (
-    <div className="">
-      <div className="">
+    <section>
+      <article>
         <nav className="flex justify-center bg-white m-2 rounded">
           <h1 className=" py-3 px-20">Recent Works </h1>
         </nav>
@@ -65,6 +80,7 @@ const Works = () => {
         <div className="grid grid-cols-4 grid-flow-row-dense gap-1 md:gap-3 relative m-2">
           {library.map((data, index, array) => (
             <div
+              key={data.id}
               className={`${
                 index % 2 === 0 ? "col-span-1" : "col-span-2"
               } w-full h-full`}
@@ -77,8 +93,8 @@ const Works = () => {
             </div>
           ))}
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 
