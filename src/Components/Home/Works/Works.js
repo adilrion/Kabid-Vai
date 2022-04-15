@@ -1,5 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import "./Works.css";
+import { Zoom } from "react-reveal";
+import { BsSearch } from "react-icons/bs";
+
+// import { BsSearch } from "react-icons/bs";
 
 const library = [
   {
@@ -73,8 +77,22 @@ const Works = () => {
   return (
     <section>
       <article>
-        <nav className="flex justify-center bg-white m-2 rounded">
-          <h1 className=" py-3 px-20">Recent Works </h1>
+        <nav className="flex justify-between items-center bg-white m-2 rounded relative px-2">
+          <h1 className=" py-3 uppercase">Recent Works </h1>
+
+          <div class="search-box">
+            <input
+              class="search-input"
+              type="text"
+              name=""
+              placeholder="Pesquise"
+            />
+            <a href="#" class="search-btn">
+              <p className="fa-search">
+                <BsSearch />
+              </p>
+            </a>
+          </div>
         </nav>
 
         <div className="grid grid-cols-4 grid-flow-row-dense gap-1 md:gap-3 relative m-2">
@@ -85,11 +103,13 @@ const Works = () => {
                 index % 2 === 0 ? "col-span-1" : "col-span-2"
               } w-full h-full`}
             >
-              <img
-                src={data.img}
-                alt="#"
-                className="w-full h-full object-center object-cover rounded"
-              />
+              <Zoom>
+                <img
+                  src={data.img}
+                  alt="#"
+                  className="w-full h-full object-center object-cover rounded"
+                />
+              </Zoom>
             </div>
           ))}
         </div>
