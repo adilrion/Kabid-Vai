@@ -1,16 +1,11 @@
 import React from "react";
 import { Fade, Zoom } from "react-reveal";
+import "./About.css";
 import img from "../../Shared/Images/Kabid.jpg";
 const About = () => {
   return (
     <article>
-      <section className="">
-        <nav className="flex justify-center bg-white m-2  rounded">
-          <h1 className=" py-3 text-[50px]">
-            <span className="text-[#fbb300] ">WOW!</span> a Whole page just
-            about me
-          </h1>
-        </nav>
+      <section className="c-about">
         <div className=" m-2 p-20 bg-white rounded">
           <div className="grid grid-cols-3">
             <div className="col-span-2">
