@@ -10,13 +10,12 @@ import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <section className="relative">
-      {
-        <nav className="c-header z-40">
-          <h1 className="">
-            <span className=" uppercase">Contact Me!</span>
-          </h1>
-        </nav>
-      }
+      <nav className="c-header z-40">
+        <h1 className="">
+          <span className=" uppercase">Contact Me!</span>
+        </h1>
+      </nav>
+
       <div className="c-contact">
         <div className="c-header-details">
           <div className="md:w-[600px] py-5 border-gray-400 border-b">
@@ -28,9 +27,9 @@ const Contact = () => {
             </p>
           </div>
         </div>
-        <div className="relative grid grid-cols-2 items-center justify-center  z-50">
-          <div className="col-span-1 p-5">
-            <div class="p-6 flex flex-col justify-center">
+        <div className="relative grid md:grid-cols-2 items-center justify-center  z-50">
+          <div className="col-span-1 order-last md:order-first p-5">
+            <div class="md:p-6 flex flex-col justify-center">
               <div className="mb-5 text-3xl">
                 <p>
                   Drop Us a <span className="">Massage!</span>
@@ -85,23 +84,23 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="col-span-1 p-5">
+          <div className="col-span-1  p-5">
             <img src={contactMe} width="100%" alt="" />
           </div>
           <div className="c-bottom-icon">
             <h1>
               <TiArrowForward />
             </h1>
-            <p className="mb-5 text-3xl">Or You Can Find Me</p>
+            <p className="text-3xl">Or You Can Find Me</p>
           </div>
         </div>
-        <div className="mt-20">
-          <div className="grid grid-cols-2 items-center justify-center  z-50">
+        <div className="mt-32 md:mt-20">
+          <div className="md:grid grid-cols-2 items-center justify-center  z-50">
             <div className="col-span-1 p-5">
               <img src={contactMe2} width="100%" alt="" />
             </div>
             <div className="col-span-1 p-5 z-40">
-              <div class="p-6 flex flex-col justify-center c-address-section">
+              <div class="md:p-6 flex flex-col justify-center c-address-section">
                 <address className="c-address">
                   <p className="c-address-icon">
                     <ImLocation2 />
