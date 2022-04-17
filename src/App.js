@@ -9,7 +9,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Version />} />
-          <Route path="/" elem ent={<Version />} />
+          <Route path="/" element={<Version />} />
+          <Route path="home" element={<Version />} />
           <Route path="v-english/*" element={<Home />} />
           <Route path="v-bangla" element={<VersionBangla />} />
         </Routes>

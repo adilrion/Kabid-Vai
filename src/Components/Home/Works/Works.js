@@ -1,7 +1,7 @@
 import React from "react";
-import "./Works.css";
-import { Zoom } from "react-reveal";
 import { BsSearch } from "react-icons/bs";
+import { Zoom } from "react-reveal";
+import "./Works.css";
 
 // import { BsSearch } from "react-icons/bs";
 
@@ -77,17 +77,17 @@ const Works = () => {
   return (
     <section>
       <article>
-        <nav className="flex justify-between items-center bg-white m-2 rounded relative px-2">
-          <h1 className=" py-3 uppercase">Recent Works </h1>
-
-          <div class="search-box">
+        <nav className="flex justify-center items-center m-2 rounded md:sticky md:top-2 z-50 absolute px-2">
+          {/* <h1 className=" py-3 uppercase">Recent Works </h1>
+           */}
+          <div className="search-box hidden md:block">
             <input
-              class="search-input"
+              className="search-input"
               type="text"
               name=""
-              placeholder="Pesquise"
+              placeholder="Search by Artworks, gallery, theme.."
             />
-            <a href="#" class="search-btn">
+            <a href="#" className="search-btn">
               <p className="fa-search">
                 <BsSearch />
               </p>

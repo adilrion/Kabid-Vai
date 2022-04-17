@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Delius&family=Redressed&display=swap");
 body {
-  background-color: #f0f2f5;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   font-family: "Merienda", cursive;
+  /* font-family: "Redressed", cursive; */
 }
 
 h1 {
@@ -31,4 +34,10 @@ h5 {
 h6 {
   font-size: 0.67em;
   font-weight: bolder;
+}
+.intro {
+  font-family: "Delius", cursive;
+  /* font-family: "Redressed", cursive; */
+  font-size: 21px;
+  color: rgb(24, 24, 24);
 }

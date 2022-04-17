@@ -18,7 +18,7 @@ const About = () => {
                 Me talking about my self
               </h1>
 
-              <p>
+              <p className="intro">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Corrupti maiores alias quis neque eius esse repellat sed cumque?
                 Illo ipsa earum amet sequi, excepturi, ratione facilis error,
@@ -45,7 +45,7 @@ const About = () => {
                   <h1 className="border-b-4 min-h-[100px] mb-3 border-white">
                     Im a Designer
                   </h1>
-                  <p>
+                  <p className="intro">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolores earum exercitationem voluptate, asperiores itaque
                     accusantium quos repellendus aliquam recusandae porro.
@@ -61,7 +61,7 @@ const About = () => {
                   <h1 className="border-b-4 min-h-[90px] mb-3 border-white">
                     Im also do some Coding
                   </h1>
-                  <p>
+                  <p p className="intro">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolores earum exercitationem voluptate, asperiores itaque
                     accusantium quos repellendus aliquam recusandae porro.
@@ -77,7 +77,7 @@ const About = () => {
                   <h1 className="border-b-4 min-h-[90px] mb-3 border-white">
                     Im also do some Artists
                   </h1>
-                  <p>
+                  <p p className="intro">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolores earum exercitationem voluptate, asperiores itaque
                     accusantium quos repellendus aliquam recusandae porro.

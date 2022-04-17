@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Link, Outlet, Route, Routes } from "react-router-dom";
+import { Link, NavLink, Outlet, Route, Routes } from "react-router-dom";
 import "../../Home/Version/Version.css";
 import "./Navigation.css";
 import { BsFacebook, BsInstagram, BsPinterest, BsGithub } from "react-icons/bs";
-import KabidImg from "../../Shared/Images/Kabid.jpg";
+import man from "../../Shared/Images/man.png";
 import Works from "../../Home/Works/Works";
 import Contact from "../../Home/Contact/Contact";
 import About from "../../Home/About/About";
@@ -14,7 +14,7 @@ const Navigation = () => {
     <section>
       <div className="md:grid grid-cols-12 gap-x-2">
         <div className="col-span-2">
-          <div className="rounded-r bg-white xl:hidden flex justify-between w-full p-5 items-center">
+          <div className=" bg-white xl:hidden flex justify-between w-full p-5 items-center relative z-50">
             <div className="flex justify-between  items-center space-x-3">
               <h1 className="leading-6 text-gray-900">Kabid Hassan</h1>
             </div>
@@ -98,74 +98,78 @@ const Navigation = () => {
             id="Main"
             className={`${
               show ? "translate-x-0" : "-translate-x-full "
-            } xl:rounded-r transform  xl:translate-x-0  ease-in-out transition duration-500  absolute  min-h-screen nav  bg-white md:m-2 md:sticky md:top-2 z-50`}
+            }  transform  xl:translate-x-0  ease-in-out transition duration-500  absolute  min-h-screen nav bg-white  md:sticky md:top-0 z-40`}
           >
-            <div className="hidden xl:flex flex-col p-5  border-gray-600 border-b">
-              <div className="rainbow">
+            <div className="xl:flex flex-col items-center py-5 mx-5  border-gray-400 border-b">
+              <div className="">
                 <img
-                  src={KabidImg}
-                  alt="Images of Kabid Hassan"
-                  className="w-[100%] h-[100%] img text-center"
+                  src={man}
+                  alt="Images of Kabid Hossain"
+                  className="img rainbow text-center"
                 />
               </div>
-              <h1 className="leading-6 text-gray-900 text-center py-5">
+              <Link
+                to="/home"
+                className="leading-6 text-4xl font-semibold text-gray-900 text-center py-5"
+              >
                 Kabid Hassan
-              </h1>
-              <p className="text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-                velit.
-              </p>
+              </Link>
             </div>
 
-            <div className="">
-              <div className="flex flex-col justify-start items-center  p-5 w-full  space-y-3 pb-5">
-                <Link
-                  to="works"
-                  className="flex jusitfy-start items-center py-2 space-x-6 w-full  focus:outline-none  focus:text-indigo-400  text-gray-900 rounded "
-                >
-                  <p className="text-base leading-4 ">Works</p>
+            <div className="flex flex-col justify-start items-center  p-5 w-full  space-y-3 pb-5">
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "red" : "",
+                  };
+                }}
+                to="works"
+                className="flex jusitfy-start items-center py-2 space-x-6 w-full  focus:outline-none    text-gray-900 rounded "
+              >
+                Works
+              </NavLink>
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "red" : "",
+                  };
+                }}
+                to="about"
+                className="flex jusitfy-start items-center py-2 space-x-6 w-full  focus:outline-none    text-gray-900 rounded "
+              >
+                About
+              </NavLink>
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "red" : "",
+                  };
+                }}
+                to="contact"
+                className="flex jusitfy-start items-center py-2 space-x-6 w-full  focus:outline-none    text-gray-900 rounded "
+              >
+                Contact
+              </NavLink>
+            </div>
+
+            {/* --------End------- */}
+            <div className="flex flex-col justify-end absolute bottom-0 left-0 items-center h-full p-5  w-full -z-30 ">
+              <div className=" flex justify-between items-center w-full">
+                <Link to="#" className="text-2xl bg p-2 text-[#3b5998]">
+                  <BsGithub />
                 </Link>
-                <Link
-                  to="about"
-                  className="flex jusitfy-start items-center py-2 space-x-6 w-full  focus:outline-none  focus:text-indigo-400  text-gray-900 rounded "
-                >
-                  <p className="text-base leading-4 ">About</p>
+                <Link to="#" className=" text-2xl bg p-2 text-[#3b5998]">
+                  <BsFacebook />
                 </Link>
-                <Link
-                  to="contact"
-                  className="flex jusitfy-start items-center py-2 space-x-6 w-full  focus:outline-none  focus:text-indigo-400  text-gray-900 rounded "
-                >
-                  <p className="text-base leading-4 ">Contact</p>
+                <Link to="#" className="text-2xl bg p-2 text-[#bc2a8d]">
+                  <BsInstagram />
+                </Link>
+                <Link to="#" className=" text-2xl bg p-2 text-[#c8232c]">
+                  <BsPinterest />
                 </Link>
               </div>
-              {/* --------End------- */}
-              <div className="flex flex-col justify-between items-center h-full p-5  w-full  mt-5">
-                <div className=" flex justify-between items-center w-full">
-                  <Link to="#" className="text-gray-700 text-2xl ">
-                    <BsGithub />
-                  </Link>
-                  <Link
-                    to="#"
-                    className="text-gray-700 text-2xl focus:text-[#3b5998]"
-                  >
-                    <BsFacebook />
-                  </Link>
-                  <Link
-                    to="#"
-                    className="text-gray-700 text-2xl focus:text-[#bc2a8d]"
-                  >
-                    <BsInstagram />
-                  </Link>
-                  <Link
-                    to="#"
-                    className="text-gray-700 text-2xl focus:text-[#c8232c]"
-                  >
-                    <BsPinterest />
-                  </Link>
-                </div>
-                <div className="text-center mt-5 text-sm  text-gray-400">
-                  <p>Copyright © 2022 Kabid Hassan</p>
-                </div>
+              <div className="text-center mt-5 text-sm text-gray-400">
+                <p>Copyright © 2022 Kabid Hassan</p>
               </div>
             </div>
           </div>
