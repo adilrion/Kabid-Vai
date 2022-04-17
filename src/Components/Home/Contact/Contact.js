@@ -1,13 +1,45 @@
-import React from "react";
-import contactMe from "../../Shared/Images/contact.png";
-import contactMe2 from "../../Shared/Images/contact-2.png";
-import { TiArrowForward } from "react-icons/ti";
-import { ImLocation2, ImPhone, ImMail3 } from "react-icons/im";
+import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 import { BsFacebook, BsGithub, BsInstagram, BsPinterest } from "react-icons/bs";
-import "./Contact.css";
+import { ImLocation2, ImMail3, ImPhone } from "react-icons/im";
+import { TiArrowForward } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import contactMe2 from "../../Shared/Images/contact-2.png";
+import contactMe from "../../Shared/Images/contact.png";
+import "./Contact.css";
 
 const Contact = () => {
+  const [data, setData] = useState(false);
+
+  /* const formHandling = (e) => {
+    const newData = { ...data };
+    newData[e.target.name] = e.target.value;
+    setData(newData);
+  }; */
+
+  const sendEmail = (e) => {
+    setData(true);
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_7ff0j7m",
+        "my_portfolio",
+        e.target,
+        "user_d6UB7RpQSTmAoLqZ1Mu3c"
+      )
+      .then(
+        (result) => {
+          if (result === "ok") {
+            setData(false);
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <section className="relative">
       <nav className="c-header z-40">
@@ -35,9 +67,10 @@ const Contact = () => {
                   Drop Us a <span className="">Massage!</span>
                 </p>
               </div>
-              <form className="z-40 bg-transparent">
+
+              <form className="z-40 bg-transparent" onSubmit={sendEmail}>
                 <div class="flex flex-col">
-                  <label for="name" class="hidden">
+                  <label htmlFor="name" class="hidden">
                     Full Name
                   </label>
                   <input
@@ -50,7 +83,7 @@ const Contact = () => {
                 </div>
 
                 <div class="flex flex-col mt-2">
-                  <label for="email" class="hidden">
+                  <label htmlFor="email" class="hidden">
                     Email
                   </label>
                   <input
@@ -63,13 +96,13 @@ const Contact = () => {
                 </div>
 
                 <div class="flex flex-col mt-2">
-                  <label for="tel" class="hidden">
+                  <label htmlFor="text" class="hidden">
                     Text
                   </label>
                   <textarea
                     type="text"
-                    name="tel"
-                    id="tel"
+                    name="message"
+                    id="text"
                     placeholder="Type your message"
                     class="w-100 mt-2 py-2 px-3 min-h-[200px] rounded    c-shadow min-h-full text-gray-800 focus:outline-none bg-transparent"
                   />
