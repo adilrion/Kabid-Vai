@@ -10,8 +10,19 @@
 }
 
 .c-shadow {
-  box-shadow: inset 0px 0px 15px -3px #ffcf2d;
+  box-shadow: inset 0px 0px 15px -3px #808080;
   font-family: "Redressed", cursive;
   font-size: 25px;
   font-style: normal;
+}
+.c-header {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-size: 40px;
+  color: #c6c6c62f;
 }

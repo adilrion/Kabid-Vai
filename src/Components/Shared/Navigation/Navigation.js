@@ -1,12 +1,12 @@
 import React, { useState } from "react";
+import { BsFacebook, BsGithub, BsInstagram, BsPinterest } from "react-icons/bs";
 import { Link, NavLink, Outlet, Route, Routes } from "react-router-dom";
-import "../../Home/Version/Version.css";
-import "./Navigation.css";
-import { BsFacebook, BsInstagram, BsPinterest, BsGithub } from "react-icons/bs";
-import man from "../../Shared/Images/man.png";
-import Works from "../../Home/Works/Works";
-import Contact from "../../Home/Contact/Contact";
 import About from "../../Home/About/About";
+import Contact from "../../Home/Contact/Contact";
+import "../../Home/Version/Version.css";
+import Works from "../../Home/Works/Works";
+import man from "../../Shared/Images/man.png";
+import "./Navigation.css";
 const Navigation = () => {
   const [show, setShow] = useState(false);
 
@@ -112,7 +112,7 @@ const Navigation = () => {
                 to="/home"
                 className="leading-6 text-4xl font-semibold text-gray-900 text-center py-5"
               >
-                <span className="text-[#FFCF2D]">Kabid</span> Hassan
+                <span className="">Kabid</span> Hassan
               </Link>
             </div>
 
@@ -120,7 +120,7 @@ const Navigation = () => {
               <NavLink
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? "#FFCF2D" : "",
+                    color: isActive ? "#808080" : "",
                   };
                 }}
                 to="works"
@@ -131,7 +131,7 @@ const Navigation = () => {
               <NavLink
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? "#FFCF2D" : "",
+                    color: isActive ? "#808080" : "",
                   };
                 }}
                 to="about"
@@ -142,7 +142,7 @@ const Navigation = () => {
               <NavLink
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? "#FFCF2D" : "",
+                    color: isActive ? "#808080" : "",
                   };
                 }}
                 to="contact"
