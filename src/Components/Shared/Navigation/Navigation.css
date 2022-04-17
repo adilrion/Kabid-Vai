@@ -10,3 +10,13 @@
 /* .img {
   border-radius: 100%;
 } */
+.ps {
+  color: green;
+}
+@media only screen and(max-width: 1250px) {
+  .navigation {
+    position: absolute;
+    width: 100vw;
+    background-color: red;
+  }
+}

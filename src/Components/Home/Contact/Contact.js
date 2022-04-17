@@ -27,7 +27,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
-        <div className="relative grid md:grid-cols-2 items-center justify-center  z-50">
+        <div className="relative grid md:grid-cols-2 items-center justify-center  z-40">
           <div className="col-span-1 order-last md:order-first p-5">
             <div class="md:p-6 flex flex-col justify-center">
               <div className="mb-5 text-3xl">
@@ -35,7 +35,7 @@ const Contact = () => {
                   Drop Us a <span className="">Massage!</span>
                 </p>
               </div>
-              <form className="z-50 bg-transparent">
+              <form className="z-40 bg-transparent">
                 <div class="flex flex-col">
                   <label for="name" class="hidden">
                     Full Name

@@ -12,9 +12,9 @@ const Navigation = () => {
 
   return (
     <section>
-      <div className="md:grid grid-cols-12 gap-x-2">
-        <div className="col-span-2">
-          <div className=" bg-white xl:hidden flex justify-between w-full p-5 items-center relative z-50">
+      <div className="xl:grid grid-cols-12 gap-x-2 relative z-50">
+        <div className="sm:col-span-12 xl:col-span-2 navigation">
+          <div className="bg-white xl:hidden flex justify-between w-full p-5 items-center relative z-50">
             <div className="flex justify-between  items-center space-x-3">
               <h1 className="leading-6 text-gray-900">Kabid Hassan</h1>
             </div>
@@ -98,9 +98,9 @@ const Navigation = () => {
             id="Main"
             className={`${
               show ? "translate-x-0" : "-translate-x-full "
-            }  transform  xl:translate-x-0  ease-in-out transition duration-500  absolute  min-h-screen nav bg-white  md:sticky md:top-0 z-40`}
+            }  transform  xl:translate-x-0  ease-in-out transition duration-500  absolute  min-h-screen nav bg-white  md:sticky md:top-0 z-50`}
           >
-            <div className="xl:flex flex-col items-center py-5 mx-5  border-gray-400 border-b">
+            <div className="hidden xl:block xl:flex flex-col items-center py-5 mx-5  border-gray-400 border-b">
               <div className="">
                 <img
                   src={man}
