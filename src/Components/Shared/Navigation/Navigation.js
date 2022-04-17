@@ -112,7 +112,7 @@ const Navigation = () => {
                 to="/home"
                 className="leading-6 text-4xl font-semibold text-gray-900 text-center py-5"
               >
-                Kabid Hassan
+                <span className="text-[#FFCF2D]">Kabid</span> Hassan
               </Link>
             </div>
 
@@ -120,7 +120,7 @@ const Navigation = () => {
               <NavLink
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? "red" : "",
+                    color: isActive ? "#FFCF2D" : "",
                   };
                 }}
                 to="works"
@@ -131,7 +131,7 @@ const Navigation = () => {
               <NavLink
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? "red" : "",
+                    color: isActive ? "#FFCF2D" : "",
                   };
                 }}
                 to="about"
@@ -142,7 +142,7 @@ const Navigation = () => {
               <NavLink
                 style={({ isActive }) => {
                   return {
-                    color: isActive ? "red" : "",
+                    color: isActive ? "#FFCF2D" : "",
                   };
                 }}
                 to="contact"
