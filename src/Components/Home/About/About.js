@@ -1,90 +1,101 @@
 import React from "react";
 import { Fade, Zoom } from "react-reveal";
 import "./About.css";
-import img from "../../Shared/Images/Kabid.jpg";
+import img1 from "../../Shared/Images/about2.png";
+import img2 from "../../Shared/Images/about3.png";
+import img3 from "../../Shared/Images/about4.png";
+import { MdDoubleArrow } from "react-icons/md";
+
 const About = () => {
   return (
     <article>
-      <section className="c-about">
-        <div className=" m-2 p-20 bg-white rounded">
-          <div className="grid grid-cols-3">
-            <div className="col-span-2">
-              <h1 className="border-b-4 w-fit mb-10 pb-2 border-gray-700">
-                Me talking about my self
-              </h1>
+      <section className="c-about md:px-10">
+        <nav className="c-header z-40">
+          <h1 className="">
+            <span className=" uppercase">About Me!😎</span>
+          </h1>
+        </nav>
+        <div>
+          <div className="grid grid-cols-2 md:min-h-[540px] p-10 relative">
+            <div className="col-span-1 h-auto relative flex justify-evenly items-center mx-5">
+              <div className="w-full flex flex-col justify-evenly items-center ">
+                <div className="a-skill">
+                  <p>Illustrator </p>
+                </div>
+                <div className="a-skill">
+                  <p>Abstract Artist</p>
+                </div>
+                <div className="a-skill">
+                  <p>Designer</p>
+                </div>
+              </div>
 
-              <p className="intro">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corrupti maiores alias quis neque eius esse repellat sed cumque?
-                Illo ipsa earum amet sequi, excepturi, ratione facilis error,
-                eius voluptatem dolorum sint molestias quod rem? Magnam, eos
-                totam assumenda odit veniam quasi illum a excepturi earum quae
-                expedita ullam deserunt, non dolores voluptatibus dolor
-                voluptates dolorem unde, incidunt dolorum nisi quod maiores!
-                Repellat ad sint voluptates, itaque ut consequuntur. Cumque
-                dolorum perspiciatis tenetur magni repellat similique,
-                blanditiis architecto possimus, omnis quae delectus sequi aut
-                sunt maiores quibusdam, molestiae est debitis vel eligendi amet?
-                Possimus maxime debitis quos asperiores natus dolorum magni?
-              </p>
+              <div className="a-bottom-icon">
+                <h1>
+                  <MdDoubleArrow />
+                </h1>
+              </div>
             </div>
-            <div className="col-span-1 flex justify-end">
-              <img src={img} alt="" width="80%" className="border rounded" />
+            <div className="col-span-1 flex justify-center items-center">
+              <img
+                src={img1}
+                alt=""
+                width="100%"
+                height="100%"
+                className="rounded-full"
+              />
             </div>
           </div>
+          <div className="grid grid-cols-2 md:min-h-[540px] p-10 relative">
+            <div className="col-span-1 flex justify-center items-center">
+              <img
+                src={img2}
+                alt=""
+                width="100%"
+                height="100%"
+                className="rounded-full"
+              />
+            </div>
+            <div className="col-span-1 h-auto relative flex justify-evenly items-center mx-5">
+              <div className="w-full flex flex-col justify-evenly items-center ">
+                <div className="a-skill">
+                  <p>Illustrator </p>
+                </div>
+                <div className="a-skill">
+                  <p>Abstract Artist</p>
+                </div>
+                <div className="a-skill">
+                  <p>Designer</p>
+                </div>
+              </div>
 
-          <div className="grid grid-cols-3 mt-10 gap-10">
-            <Zoom>
-              <div className="col-span-1 rounded p-4 bg-[#399953]">
-                <Fade bottom cascade>
-                  <h1 className="border-b-4 min-h-[100px] mb-3 border-white">
-                    Im a Designer
-                  </h1>
-                  <p className="intro">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolores earum exercitationem voluptate, asperiores itaque
-                    accusantium quos repellendus aliquam recusandae porro.
-                    Ducimus possimus ad ipsam inventore, ab laudantium nobis
-                    eaque similique. Voluptate, blanditiis.
-                  </p>
-                </Fade>
+              <div className="a-bottom-icon">
+                <h1>
+                  <MdDoubleArrow />
+                </h1>
               </div>
-            </Zoom>
-            <Zoom>
-              <div className="col-span-1 rounded  p-4 bg-[#d53e33]">
-                <Fade bottom cascade>
-                  <h1 className="border-b-4 min-h-[90px] mb-3 border-white">
-                    Im also do some Coding
-                  </h1>
-                  <p p className="intro">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolores earum exercitationem voluptate, asperiores itaque
-                    accusantium quos repellendus aliquam recusandae porro.
-                    Ducimus possimus ad ipsam inventore, ab laudantium nobis
-                    eaque similique. Voluptate, blanditiis.
-                  </p>
-                </Fade>
+            </div>
+          </div>
+          <div className="grid grid-cols-2  md:min-h-[540px] p-10 relative">
+            <div className="col-span-1 h-auto relative flex justify-evenly items-center mx-5">
+              <div className="w-full flex flex-col justify-evenly items-center ">
+                <div className="a-skill briyani-skill">
+                  <p>Professional Biriyani Lover </p>
+                </div>
               </div>
-            </Zoom>
-            <Zoom>
-              <div className="col-span-1 rounded  p-4 bg-[#fbb300]">
-                <Fade bottom cascade>
-                  <h1 className="border-b-4 min-h-[90px] mb-3 border-white">
-                    Im also do some Artists
-                  </h1>
-                  <p p className="intro">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolores earum exercitationem voluptate, asperiores itaque
-                    accusantium quos repellendus aliquam recusandae porro.
-                    Ducimus possimus ad ipsam inventore, ab laudantium nobis
-                    eaque similique. Voluptate, blanditiis.
-                  </p>
-                </Fade>
-              </div>
-            </Zoom>
+            </div>
+            <div className="col-span-1 flex justify-center items-center">
+              {" "}
+              <img
+                src={img3}
+                alt=""
+                width="100%"
+                height="100%"
+                className="rounded-full"
+              />
+            </div>
           </div>
         </div>
-        <div></div>
       </section>
     </article>
   );

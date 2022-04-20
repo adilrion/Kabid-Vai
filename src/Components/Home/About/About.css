@@ -8,3 +8,44 @@
     0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   background: rgb(255, 255, 255);
 }
+.a-skill {
+  width: 100%;
+  margin: 10px 20px;
+  border-radius: 5px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Delius", cursive;
+  font-weight: 700;
+  text-transform: capitalize;
+  box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  background-color: #8ec5fc;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(0, 84, 166, 1) 0%,
+    rgba(132, 189, 201, 1) 90%
+  );
+}
+.a-bottom-icon {
+  position: absolute;
+  color: #808080;
+
+  font-size: 50px;
+  bottom: -15%;
+  left: 40%;
+  text-align: center;
+}
+.a-bottom-icon > h1 {
+  transform: rotate(90deg);
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: #3f3d56;
+}
+.briyani-skill {
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+}
