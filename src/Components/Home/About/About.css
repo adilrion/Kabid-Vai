@@ -20,12 +20,7 @@
   text-transform: capitalize;
   box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.1),
     0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  background-color: #8ec5fc;
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(0, 84, 166, 1) 0%,
-    rgba(132, 189, 201, 1) 90%
-  );
+  background: transparent;
   animation: skill 8s ease-in-out infinite;
   border-radius: 0px 44px 0px 45px;
   transition: all 1s ease-in-out;
@@ -35,11 +30,12 @@
 .a-bottom-icon {
   position: absolute;
   color: #808080;
-
   font-size: 50px;
   bottom: -15%;
   left: 40%;
   text-align: center;
+  animation: arrow 3s ease-in-out infinite;
+  transition: all 8s ease-in-out;
 }
 .a-bottom-icon > h1 {
   transform: rotate(90deg);
@@ -59,6 +55,8 @@
   left: 45%;
   font-size: 50px;
   text-align: center;
+
+  /* transition: all 1s ease-in-out; */
 }
 .bottom-arrow-icon > h1 {
   transform: rotate(90deg);
@@ -69,9 +67,9 @@
 }
 /* sass */
 :root {
-  --primary: rgba(255, 244, 228, 1);
-  --secondary: rgba(240, 246, 238, 1);
-  --third: rgba(255, 244, 228, 1);
+  --primary: rgba(255, 255, 255, 1);
+  --secondary: rgba(215, 223, 252, 1);
+  --third: rgba(255, 255, 255, 1);
 }
 
 .shape {
@@ -82,7 +80,8 @@
   font-weight: 700;
   font-size: 25px;
   text-align: center;
-  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%),
+    transparent;
   animation: morph 8s ease-in-out infinite;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   height: 300px;
@@ -94,25 +93,20 @@
 @keyframes morph {
   0% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    background: linear-gradient(
-      45deg,
-      var(--primary) 0%,
-      var(--secondary) 100%
-    );
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%),
+      transparent;
   }
 
   50% {
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+    background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%),
+      transparent;
   }
 
   100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    background: linear-gradient(
-      45deg,
-      var(--primary) 0%,
-      var(--secondary) 100%
-    );
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%),
+      transparent;
   }
 }
 @keyframes skill {
@@ -145,5 +139,35 @@
       var(--primary) 0%,
       var(--secondary) 100%
     );
+  }
+}
+
+@keyframes arrow {
+  0% {
+    bottom: -15%;
+    left: 40%;
+  }
+  100% {
+    bottom: -20%;
+    left: 40%;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .bottom-arrow-icon {
+    display: none;
+  }
+  .c-about {
+    margin: 0;
+    border-radius: 0;
+    border: 1px solid #e9e5e5;
+    box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.1),
+      0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+  }
+  .a-bottom-icon {
+    bottom: -32%;
+    left: 35%;
+    text-align: center;
   }
 }
