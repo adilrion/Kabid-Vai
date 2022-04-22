@@ -105,7 +105,9 @@ const Works = () => {
               <div
                 key={data.id}
                 className={`${
-                  index % 2 === 0 ? "col-span-1" : "col-span-2"
+                  index % 2 === 0
+                    ? "col-span-4 md:col-span-1"
+                    : "col-span-4 md:col-span-2"
                 } w-full h-auto art-section  bg-transparent`}
                 onClick={() => {
                   setVisible(true);
