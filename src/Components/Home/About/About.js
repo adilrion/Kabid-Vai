@@ -42,19 +42,17 @@ const About = () => {
         <div>
           <div className="grid grid-cols-2 md:min-h-[540px] md:p-10 relative">
             <div className="col-span-2 order-last md:order-first md:col-span-1 h-auto relative flex justify-evenly items-center mx-5">
-              <Fade bottom cascade>
-                <div className="w-full flex flex-col justify-evenly items-center ">
-                  <Link to="#" className="a-skill">
-                    <p>Illustrator </p>
-                  </Link>
-                  <Link to="#" className="a-skill">
-                    <p>Abstract Artist</p>
-                  </Link>
-                  <Link to="#" className="a-skill">
-                    <p>Designer</p>
-                  </Link>
-                </div>
-              </Fade>
+              <div className="w-full flex flex-col justify-evenly items-center ">
+                <Link to="#" className="a-skill">
+                  <p>Illustrator </p>
+                </Link>
+                <Link to="#" className="a-skill">
+                  <p>Abstract Artist</p>
+                </Link>
+                <Link to="#" className="a-skill">
+                  <p>Designer</p>
+                </Link>
+              </div>
 
               <div className="a-bottom-icon">
                 <h1>
@@ -90,19 +88,17 @@ const About = () => {
               </Zoom>
             </div>
             <div className="col-span-2 md:col-span-1 h-auto relative flex justify-evenly items-center mx-5">
-              <Fade bottom cascade>
-                <div className="w-full flex flex-col justify-evenly bg-transparent items-center ">
-                  <Link to="#" className="a-skill">
-                    <p>Researcher</p>
-                  </Link>
-                  <Link to="#" className="a-skill">
-                    <p>Educator</p>
-                  </Link>
-                  <Link to="#" className="a-skill">
-                    <p>Content Creator</p>
-                  </Link>
-                </div>
-              </Fade>
+              <div className="w-full flex flex-col justify-evenly bg-transparent items-center ">
+                <Link to="#" className="a-skill">
+                  <p>Researcher</p>
+                </Link>
+                <Link to="#" className="a-skill">
+                  <p>Educator</p>
+                </Link>
+                <Link to="#" className="a-skill">
+                  <p>Content Creator</p>
+                </Link>
+              </div>
 
               <div className="a-bottom-icon">
                 <h1>
