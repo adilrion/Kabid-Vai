@@ -170,4 +170,14 @@
     left: 35%;
     text-align: center;
   }
+  @keyframes arrow {
+    0% {
+      bottom: -32%;
+      left: 35%;
+    }
+    100% {
+      bottom: -37%;
+      left: 35%;
+    }
+  }
 }
