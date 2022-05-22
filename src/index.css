@@ -2,13 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
+/* @layer components {
+  .box-shadow {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+} */
 
-@import url("https://fonts.googleapis.com/css2?family=Delius&family=Redressed&display=swap");
+@font-face {
+  font-family: "virtuous-slab-regular";
+  src: url("https://dafonttop.com/wp-data/v/38/8038/file/Virtuous-Slab.otf")
+      format("woff"),
+    url("https://dafonttop.com/wp-data/v/38/8038/file/Virtuous-Slab.otf")
+      format("opentype"),
+    url("https://dafonttop.com/wp-data/v/38/8038/file/Virtuous-Slab.otf")
+      format("truetype");
+}
+
 body {
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-  font-family: "Merienda", cursive;
-  /* font-family: "Redressed", cursive; */
+  background-color: rgb(248, 248, 248);
+  font-family: "virtuous-slab-regular";
 }
 
 h1 {
@@ -36,8 +48,6 @@ h6 {
   font-weight: bolder;
 }
 .intro {
-  font-family: "Delius", cursive;
-  /* font-family: "Redressed", cursive; */
   font-size: 21px;
   color: rgb(24, 24, 24);
 }

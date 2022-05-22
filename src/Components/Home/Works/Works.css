@@ -54,9 +54,9 @@
   transition: 0.4s;
 }
 .art-section:hover .art-images {
-  filter: blur(1px) brightness(80%);
-  -webkit-filter: blur(1px) brightness(80%);
-  -moz-filter: blur(1px) brightness(80%);
+  filter: blur(1px) brightness(90%);
+  -webkit-filter: blur(1px) brightness(90%);
+  -moz-filter: blur(1px) brightness(90%);
   cursor: pointer;
 }
 
@@ -77,7 +77,7 @@
   font-size: 1rem;
 }
 .art-section:hover .text {
-  font-size: 30px;
+  font-size: 1.3rem;
   padding: 0;
   width: fit-content;
   height: fit-content;

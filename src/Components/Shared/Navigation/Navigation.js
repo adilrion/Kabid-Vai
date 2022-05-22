@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BsFacebook, BsGithub, BsInstagram, BsPinterest } from "react-icons/bs";
 import { Link, NavLink, Outlet, Route, Routes } from "react-router-dom";
+import Blogs from "../../Blogs/Blogs";
 import About from "../../Home/About/About";
 import Contact from "../../Home/Contact/Contact";
 import "../../Home/Version/Version.css";
@@ -15,14 +16,14 @@ const Navigation = () => {
       <div className="xl:grid grid-cols-12 gap-x-2 relative z-50">
         <div className="sm:col-span-12 xl:col-span-2 navigation">
           <nav className="relative sticky top-0 z-50">
-            <div className="box-shadow navigation xl:hidden flex justify-between h-[8vh] p-6 items-center bg-white">
+            <div className="navigation xl:hidden flex justify-between h-[8vh] p-6 items-center bg-white bg-transparent">
               <div className="flex justify-between  items-center space-x-3">
                 <img
                   className="rounded-full w-[40px] h-[40px]"
                   src={man}
                   alt="kabid Hassan photos"
                 />
-                <p className="text-2xl font-bold leading-6 text-[#FFCF2D]">
+                <p className="text-2xl font-bold leading-6 text-gray-800">
                   Kabid hassan
                 </p>
               </div>
@@ -105,7 +106,7 @@ const Navigation = () => {
               id="Main"
               className={`${
                 show ? "translate-x-0" : "-translate-x-full"
-              } xl: transform  xl:translate-x-0  ease-in-out transition duration-500 flex justify-start items-start h-[92vh]  md:h-[100vh]  w-full sm:w-64  flex-col absolute box-shadow navigation z-50 bg-white `}
+              } xl: transform  xl:translate-x-0  ease-in-out transition duration-500 flex justify-start items-start h-[92vh]  md:h-[100vh]  w-full sm:w-64  flex-col box-shadow navigation absolute z-50 bg-white `}
             >
               <div className="hidden xl:block xl:flex flex-col items-center py-5 mx-5  border-gray-400 border-b">
                 <div className="">
@@ -116,8 +117,8 @@ const Navigation = () => {
                   />
                 </div>
                 <Link
-                  to="/home"
-                  className="leading-6 text-4xl font-semibold text-gray-900 text-center py-5"
+                  to="home"
+                  className="leading-8 text-4xl font-semibold text-gray-900 text-center pt-5"
                 >
                   <span className="">Kabid</span> Hassan
                 </Link>
@@ -148,6 +149,15 @@ const Navigation = () => {
                 >
                   <p className="text-base text-[18px] font-medium leading-4  ">
                     About
+                  </p>
+                </Link>
+                <Link
+                  to="blog"
+                  onClick={() => setShow(false)}
+                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-[#5046B9]  text-gray-600 rounded "
+                >
+                  <p className="text-base text-[18px] font-medium leading-4  ">
+                    Blog
                   </p>
                 </Link>
               </div>
@@ -184,6 +194,7 @@ const Navigation = () => {
             <Route path="works" element={<Works />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
+            <Route path="Blog" element={<Blogs />} />
           </Routes>
           <Outlet />
         </div>
