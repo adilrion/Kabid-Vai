@@ -1,17 +1,26 @@
-import NoWorkResult from "postcss/lib/no-work-result";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet, Route, Routes } from "react-router-dom";
 import SrcBar from "../Utils/SrcBar";
 import { pageTitle } from "../Utils/Title";
+import ReadPage from "./ReadPage";
 import RecentBlog from "./RecentBlog";
 
 const blog = [
-  { title: "", des: "", writer: "", img: "" },
-  { title: "", des: "", writer: "", img: "" },
-  { title: "", des: "", writer: "", img: "" },
-  { title: "", des: "", writer: "", img: "" },
-  { title: "", des: "", writer: "", img: "" },
-  { title: "", des: "", writer: "", img: "" },
+  {
+    title: " Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    des: `dolor sit amet consectetur adipisicing elit. Nostrum,
+  ex.Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Omnis, maiores Lorem ipsum dolor sit amet. this is
+  the best`,
+    writer: "",
+    img: "",
+    id: 1,
+  },
+  { title: "", des: "", writer: "", img: "", id: 2 },
+  { title: "", des: "", writer: "", img: "", id: 3 },
+  { title: "", des: "", writer: "", img: "", id: 4 },
+  { title: "", des: "", writer: "", img: "", id: 5 },
+  { title: "", des: "", writer: "", img: "", id: 6 },
 ];
 
 const Blog = () => {
@@ -23,7 +32,7 @@ const Blog = () => {
         {/* <img src="" alt="" /> */}
         <div className="b-card-title p-5 md:p-8 w-[96%]  md:w-[80%] lg:w-[50%] absolute bottom-2 md:bottom-3 md:left-3 lg:bottom-10   lg:left-10 rounded">
           <span className="text-xsm text-gray-500">
-            <time datetime="2001-05-15T19:00">15 May 2022</time>
+            <time dateTime="2001-05-15T19:00">15 May 2022</time>
           </span>
           <p className="text-gray-700 leading-8 mb-2 text-xl md:text-2xl font-semibold">
             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -33,8 +42,8 @@ const Blog = () => {
             placeat quas neque similique doloribus autem sint mollitia minus
             vitae ipsum quibusdam
             <Link
-              to="#"
-              className="ml-1 font-extralight text-gray-500 text-sm hover:underline hover:text-[#5da0de]"
+              to="read"
+              className="ml-1 font-light text-gray-500 text-sm hover:underline hover:text-[#5da0de]"
             >
               ...see more
             </Link>
@@ -44,9 +53,16 @@ const Blog = () => {
 
       <section className="grid grid-cols-12 gap-5 mt-8 sm:mx-2 md:mx-8">
         <section className=" col-span-12 lg:col-span-8">
+          <Routes>
+            <Route path="read/:id" element={<ReadPage />} />
+          </Routes>
+          <Outlet />
           {blog.map((data) => {
             return (
-              <div className="c-b-card grid grid-cols-1 md:grid-cols-2 shadow p-5 gap-5 bg-white rounded  mx-5 md:mx-0 mb-5">
+              <div
+                key={data.id}
+                className="c-b-card grid grid-cols-1 md:grid-cols-2 shadow p-5 gap-5 bg-white rounded  mx-5 md:mx-0 mb-5"
+              >
                 <div className="c-img col-span-1 rounded">
                   <img
                     src="https://images.unsplash.com/photo-1652542207647-7c1714e7b596?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074"
@@ -62,16 +78,18 @@ const Blog = () => {
                     <p className=" text-gray-600">
                       dolor sit amet consectetur adipisicing elit. Nostrum,
                       ex.Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Omnis, maiores.{" "}
+                      elit. Omnis, maiores Lorem ipsum dolor sit amet. this is
+                      the best.{" "}
                       <Link
-                        to="#"
+                        to={`read/${data.id}`}
+                        state={{ data }}
                         className="ml-1 font-extralight text-gray-500 text-sm hover:underline hover:text-[#5da0de]"
                       >
                         ...see more
                       </Link>
                     </p>
                     <span className="text-xsm text-gray-500 ">
-                      <time datetime="2001-05-15T19:00">15 May 2022</time>
+                      <time dateTime="2001-05-15T19:00">15 May 2022</time>
                     </span>
                   </div>
                 </div>
@@ -142,7 +160,7 @@ const Blog = () => {
                 </p>
               </div>
               <div className="flex items-center pt-3 text-gray-600 hover:text-indigo-700 cursor-pointer">
-                <p className="text-sm font-medium leading-none mr-3">Next</p>
+                <p className="text-sm font-medium leading-none mr-3 ">Next</p>
                 <svg
                   width={14}
                   height={8}
@@ -177,7 +195,7 @@ const Blog = () => {
           </div>
         </section>
         <aside className=" col-span-12 lg:col-span-4 w-full ">
-          <div className="mx-5 md:mx-0">
+          <div className="mx-5 md:mx-0 side-bar">
             <div className="src-bar">
               <SrcBar />
             </div>

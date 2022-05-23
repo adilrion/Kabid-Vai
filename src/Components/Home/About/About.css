@@ -11,8 +11,8 @@
   font-family: "Delius", cursive;
   font-weight: 700;
   text-transform: capitalize;
-  box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.1),
-    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.1), */
+  /* 0px 10px 15px -3px rgba(0, 0, 0, 0.1); */
   background: transparent;
   animation: skill 8s ease-in-out infinite;
   border-radius: 0px 44px 0px 45px;
@@ -60,9 +60,9 @@
 }
 /* sass */
 :root {
-  --primary: rgba(255, 255, 255, 1);
-  --secondary: rgba(215, 223, 252, 1);
-  --third: rgba(255, 255, 255, 1);
+  --primary: rgb(249, 249, 249);
+  --secondary: rgb(246, 247, 250);
+  --third: rgb(249, 249, 249);
 }
 
 .shape {
@@ -75,6 +75,8 @@
   text-align: center;
   background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%),
     transparent;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   animation: morph 8s ease-in-out infinite;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   height: 300px;

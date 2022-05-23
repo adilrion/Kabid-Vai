@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BsFacebook, BsGithub, BsInstagram, BsPinterest } from "react-icons/bs";
 import { Link, NavLink, Outlet, Route, Routes } from "react-router-dom";
 import Blogs from "../../Blogs/Blogs";
+import ReadPage from "../../Blogs/ReadPage";
 import About from "../../Home/About/About";
 import Contact from "../../Home/Contact/Contact";
 import "../../Home/Version/Version.css";
@@ -19,7 +20,7 @@ const Navigation = () => {
             <div className="navigation xl:hidden flex justify-between h-[8vh] p-6 items-center bg-white bg-transparent">
               <div className="flex justify-between  items-center space-x-3">
                 <img
-                  className="rounded-full w-[40px] h-[40px]"
+                  className="rounded-full w-[20px] h-[20px]"
                   src={man}
                   alt="kabid Hassan photos"
                 />
@@ -207,7 +208,7 @@ const Navigation = () => {
             <Route path="works" element={<Works />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
-            <Route path="Blog" element={<Blogs />} />
+            <Route path="blog/*" element={<Blogs />} />
           </Routes>
           <Outlet />
         </div>

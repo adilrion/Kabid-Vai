@@ -21,6 +21,12 @@
   transition: all 0.9s ease-in-out;
 }
 .c-img:hover .image {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
+
 /* Recent Blog */
+.side-bar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 10px;
+}

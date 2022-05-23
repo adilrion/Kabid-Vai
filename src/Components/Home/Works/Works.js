@@ -104,29 +104,30 @@ const Works = () => {
         <div className="grid grid-cols-4 grid-flow-row-dense gap-1 md:gap-3 relative m-2">
           {library.map((data, index) => {
             return (
-              <div
-                key={data.id}
-                className={`${
-                  index % 2 === 0
-                    ? "col-span-4 md:col-span-1"
-                    : "col-span-4 md:col-span-2"
-                } w-full h-auto art-section  bg-transparent`}
-                onClick={() => {
-                  setVisible(true);
-                  setActiveIndex(index);
-                }}
-              >
-                <Zoom>
+              <Zoom>
+                <div
+                  key={data.id}
+                  className={`${
+                    index % 2 === 0
+                      ? "col-span-4 md:col-span-1"
+                      : "col-span-4 md:col-span-2"
+                  } w-full h-auto art-section  bg-transparent`}
+                  onClick={() => {
+                    setVisible(true);
+                    setActiveIndex(index);
+                  }}
+                >
                   <img
                     src={data.src}
                     alt="#"
                     className="w-full h-full object-center object-cover rounded art-images "
                   />
-                </Zoom>
-                <div class="">
-                  <p class="text">{data.title}</p>
+
+                  <div class="">
+                    <p class="text">{data.title}</p>
+                  </div>
                 </div>
-              </div>
+              </Zoom>
             );
           })}
           <Viewer

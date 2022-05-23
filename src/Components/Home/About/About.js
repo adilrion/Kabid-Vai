@@ -43,13 +43,13 @@ const About = () => {
           <div className="grid grid-cols-2 md:min-h-[540px] md:p-10 relative">
             <div className="col-span-2 order-last md:order-first md:col-span-1 h-auto relative flex justify-evenly items-center mx-5">
               <div className="w-full flex flex-col justify-evenly items-center ">
-                <Link to="#" className="a-skill">
+                <Link to="#" className=" a-skill shadow ">
                   <p>Illustrator </p>
                 </Link>
-                <Link to="#" className="a-skill">
+                <Link to="#" className=" a-skill shadow">
                   <p>Abstract Artist</p>
                 </Link>
-                <Link to="#" className="a-skill">
+                <Link to="#" className=" a-skill shadow">
                   <p>Designer</p>
                 </Link>
               </div>
@@ -89,13 +89,13 @@ const About = () => {
             </div>
             <div className="col-span-2 md:col-span-1 h-auto relative flex justify-evenly items-center mx-5">
               <div className="w-full flex flex-col justify-evenly bg-transparent items-center ">
-                <Link to="#" className="a-skill">
+                <Link to="#" className=" a-skill shadow">
                   <p>Researcher</p>
                 </Link>
-                <Link to="#" className="a-skill">
+                <Link to="#" className=" a-skill shadow">
                   <p>Educator</p>
                 </Link>
-                <Link to="#" className="a-skill">
+                <Link to="#" className=" a-skill shadow">
                   <p>Content Creator</p>
                 </Link>
               </div>
