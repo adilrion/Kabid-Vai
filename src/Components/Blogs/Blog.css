@@ -13,6 +13,14 @@
   background-color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
-.c-b-des {
+
+.c-img {
+  overflow: hidden;
+}
+.image {
+  transition: all 0.9s ease-in-out;
+}
+.c-img:hover .image {
+  transform: scale(1.1);
 }
 /* Recent Blog */

@@ -118,7 +118,7 @@ const Navigation = () => {
                 </div>
                 <Link
                   to="home"
-                  className="leading-8 text-4xl font-semibold text-gray-900 text-center pt-5"
+                  className="leading-8 text-4xl font-semibold text-gray-700 text-center pt-5"
                 >
                   <span className="">Kabid</span> Hassan
                 </Link>
@@ -127,7 +127,7 @@ const Navigation = () => {
                 <Link
                   to="works"
                   onClick={() => setShow(false)}
-                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none focus:text-[#5046B9]  text-gray-600 rounded "
+                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none focus:text-gray-800  text-gray-600 rounded "
                 >
                   <p className="text-base text-[18px] font-medium  leading-4 ">
                     Works
@@ -136,7 +136,7 @@ const Navigation = () => {
                 <Link
                   to="contact"
                   onClick={() => setShow(false)}
-                  className="flex jusitfy-start items-center w-full  space-x-6 focus:outline-none text-gray-600 focus:text-[#5046B9]   rounded "
+                  className="flex jusitfy-start items-center w-full  space-x-6 focus:outline-none text-gray-600 focus:text-gray-800   rounded "
                 >
                   <p className="text-base text-[18px] font-medium leading-4 ">
                     Contact
@@ -145,7 +145,7 @@ const Navigation = () => {
                 <Link
                   to="about"
                   onClick={() => setShow(false)}
-                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-[#5046B9]  text-gray-600 rounded "
+                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-gray-800  text-gray-600 rounded "
                 >
                   <p className="text-base text-[18px] font-medium leading-4  ">
                     About
@@ -154,7 +154,7 @@ const Navigation = () => {
                 <Link
                   to="blog"
                   onClick={() => setShow(false)}
-                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-[#5046B9]  text-gray-600 rounded "
+                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-gray-800  text-gray-600 rounded "
                 >
                   <p className="text-base text-[18px] font-medium leading-4  ">
                     Blog
@@ -165,17 +165,29 @@ const Navigation = () => {
               <div className="flex flex-col justify-end items-center h-full pb-6  px-6  w-full">
                 <div className=" flex justify-center items-center w-full space-x-2">
                   <div className="flex flex-col justify-between items-center  space-x-2">
-                    <div className=" flex justify-between items-center w-full">
-                      <Link to="#" className="text-2xl bg p-2 text-[#3b5998]">
+                    <div className=" flex justify-between items-center w-full text-gray-600">
+                      <Link
+                        to="#"
+                        className="text-2xl bg p-2 hover:text-[#3b5998]"
+                      >
                         <BsGithub />
                       </Link>
-                      <Link to="#" className=" text-2xl bg p-2 text-[#3b5998]">
+                      <Link
+                        to="#"
+                        className=" text-2xl bg p-2 hover:text-[#3b5998]"
+                      >
                         <BsFacebook />
                       </Link>
-                      <Link to="#" className="text-2xl bg p-2 text-[#bc2a8d]">
+                      <Link
+                        to="#"
+                        className="text-2xl bg p-2 hover:text-[#bc2a8d]"
+                      >
                         <BsInstagram />
                       </Link>
-                      <Link to="#" className=" text-2xl bg p-2 text-[#c8232c]">
+                      <Link
+                        to="#"
+                        className=" text-2xl bg p-2 hover:text-[#c8232c]"
+                      >
                         <BsPinterest />
                       </Link>
                     </div>
@@ -191,6 +203,7 @@ const Navigation = () => {
         <div className="col-span-10">
           <Routes>
             <Route path="/" element={<Works />} />
+            <Route path="home" element={<Works />} />
             <Route path="works" element={<Works />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />

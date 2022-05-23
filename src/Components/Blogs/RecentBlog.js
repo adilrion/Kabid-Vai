@@ -1,10 +1,12 @@
 import React from "react";
+import { pageTitle } from "../Utils/Title";
 
 const RecentBlog = () => {
+  pageTitle("Recent Blog");
   return (
-    <div>
+    <section>
       <h1>recent blog</h1>
-    </div>
+    </section>
   );
 };
 

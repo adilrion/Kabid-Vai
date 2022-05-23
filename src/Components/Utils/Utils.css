@@ -1,0 +1,50 @@
+/* CSS For SrcBar */
+.b-search-box {
+  border-radius: 50px;
+  height: 55px;
+  overflow: hidden;
+  display: flex;
+  max-width: 100%;
+  transition: all 0.3s ease 0s;
+}
+
+.b-search-input {
+  border: 0 none;
+  color: #333;
+  height: 100%;
+  left: 0;
+  padding: 10px 25px;
+  top: 0;
+  width: calc(100% - 80px);
+
+  outline: none;
+
+  transition: 0.4s;
+}
+.b-search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff none repeat scroll 0 0;
+  border: 0 none;
+  font-size: 25px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  width: 80px;
+}
+
+.fa-search {
+  font-size: 35px;
+  font-weight: 900;
+  color: #808080;
+}
+
+.b-search-btn:hover {
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
+}

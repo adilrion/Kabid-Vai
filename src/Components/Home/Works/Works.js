@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import { Zoom } from "react-reveal";
 import Viewer from "react-viewer";
+import { pageTitle } from "../../Utils/Title";
 
 import "./Works.css";
 
@@ -76,6 +77,7 @@ const library = [
 ];
 
 const Works = () => {
+  pageTitle("Works");
   const [activeIndex, setActiveIndex] = useState(0);
   const [visible, setVisible] = useState(false);
   return (
