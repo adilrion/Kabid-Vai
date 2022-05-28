@@ -62,17 +62,6 @@
   animation: bottom 3s ease-in-out infinite;
 }
 
-/* @keyframes bottom {
-  0% {
-    bottom: -18%;
-    left: 40%;
-  }
-  100% {
-    bottom: -30%;
-    left: 40%;
-  }
-} */
-
 @media only screen and (max-width: 48em) {
   .c-bottom-icon {
     position: absolute;

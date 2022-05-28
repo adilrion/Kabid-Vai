@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import Navigation from "../../Shared/Navigation/Navigation";
 
 const Home = () => {
@@ -10,3 +10,4 @@ const Home = () => {
 };
 
 export default Home;
+ */

@@ -1,11 +1,10 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Outlet, Route, Routes, useLocation } from "react-router-dom";
+import "./Blog.css";
 
 const ReadPage = () => {
-  const location = useLocation();
-  const { title, img, des } = location.state.data;
-  console.log(title);
-  console.log(location);
+  const { title, img, des, id } = useLocation().state.data;
+  // console.log(id);
   return (
     <div>
       <h1>{title}</h1>

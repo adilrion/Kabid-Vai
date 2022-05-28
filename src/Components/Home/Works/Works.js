@@ -86,7 +86,7 @@ const Works = () => {
         <nav className="flex justify-center items-center m-2 rounded md:sticky md:top-2 z-50 absolute px-2">
           {/* <h1 className=" py-3 uppercase">Recent Works </h1>
            */}
-          <div className="search-box hidden md:block">
+          <div className="search-box shadow hidden md:block">
             <input
               className="search-input"
               type="text"

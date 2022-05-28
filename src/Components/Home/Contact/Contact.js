@@ -42,7 +42,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative">
+    <section className="relative px-10">
       <nav className="c-header z-40">
         <h1 className="">
           <span className=" uppercase">Contact Me!</span>
@@ -51,7 +51,7 @@ const Contact = () => {
 
       <div className="c-contact">
         <div className="c-header-details">
-          <div className="md:w-[600px] py-5 border-gray-400 border-b">
+          <div className="md:w-[600px] py-5 border-gray-400 border-b mx-24">
             <Zoom>
               <h1>DON'T BE SHY</h1>
             </Zoom>
@@ -65,7 +65,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="relative grid md:grid-cols-2 items-center justify-center  z-40">
-          <div className="col-span-1 order-last md:order-first p-5">
+          <div className="col-span-1 order-last md:order-first">
             <Fade bottom cascade>
               <div class="md:p-6 flex flex-col justify-center">
                 <div className="mb-5 text-3xl">

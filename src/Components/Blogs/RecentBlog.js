@@ -1,4 +1,6 @@
 import React from "react";
+import SrcBar from "../Utils/SrcBar";
+import "./Blog.css";
 
 const blog = [
   { title: "", des: "", writer: "", img: "" },
@@ -11,12 +13,17 @@ const blog = [
 
 const RecentBlog = () => {
   return (
-    <section className="mx-2">
-      <header className="border-b py-2 mt-3">
-        <h3 className="text-gray-700">Recent post</h3>
-      </header>
+    <section className="relative">
+      <div className="px-2 sticky top-0 r-header">
+        <div className="src-bar">
+          <SrcBar />
+        </div>
+        <header className="border-b py-2 mt-2">
+          <h3 className="text-gray-700">Recent post</h3>
+        </header>
+      </div>
 
-      <article className="mt-4">
+      <article className="mt-4 mx-2 overflow-y-auto h-screen">
         {blog.map((data) => {
           return (
             <div className="shadow rounded mb-4">

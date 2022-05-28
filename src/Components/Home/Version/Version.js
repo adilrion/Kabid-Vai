@@ -14,7 +14,7 @@ const Version = () => {
               <img
                 src={man}
                 alt="Images of Kabid Hossain"
-                className="img rainbow text-center"
+                className="img rainbow shadow text-center"
               />
             </div>
             <h1 className="">Kabid hossain</h1>
@@ -24,18 +24,18 @@ const Version = () => {
             quas!
           </p>
         </div>
-        <div className="mt-4">
+        <div className="mt-4 gap-5 flex">
           <Link
             to="/v-english"
             type="button"
-            className="btn1 focus:outline-none focus:ring-2 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2 mr-2 mb-2"
+            className="shadow bg-white focus:ring-gray-300 font-bold rounded-md text-md text-gray-900 px-5 py-2"
           >
             English Version
           </Link>
           <Link
             to="/v-bangla"
             type="button"
-            className="btn1 focus:outline-none focus:ring-2 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2 mr-2 mb-2"
+            className="shadow bg-white focus:ring-gray-300 font-bold rounded-md text-md text-gray-900 px-5 py-2"
           >
             Bangla Version
           </Link>

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { BsFacebook, BsGithub, BsInstagram, BsPinterest } from "react-icons/bs";
-import { Link, NavLink, Outlet, Route, Routes } from "react-router-dom";
-import Blogs from "../../Blogs/Blogs";
-import ReadPage from "../../Blogs/ReadPage";
+import { Link, Outlet, Route, Routes } from "react-router-dom";
+import BlogMain from "../../Blogs/BlogMain";
 import About from "../../Home/About/About";
 import Contact from "../../Home/Contact/Contact";
 import "../../Home/Version/Version.css";
@@ -17,7 +16,7 @@ const Navigation = () => {
       <div className="xl:grid grid-cols-12 gap-x-2 relative z-50">
         <div className="sm:col-span-12 xl:col-span-2 navigation">
           <nav className="relative sticky top-0 z-50">
-            <div className="navigation xl:hidden flex justify-between h-[8vh] p-6 items-center bg-white bg-transparent">
+            <div className=" xl:hidden flex justify-between h-[8vh] p-6 items-center bg-white bg-transparent">
               <div className="flex justify-between  items-center space-x-3">
                 <img
                   className="rounded-full w-[20px] h-[20px]"
@@ -107,18 +106,18 @@ const Navigation = () => {
               id="Main"
               className={`${
                 show ? "translate-x-0" : "-translate-x-full"
-              } xl: transform  xl:translate-x-0  ease-in-out transition duration-500 flex justify-start items-start h-[92vh]  md:h-[100vh]  w-full sm:w-64  flex-col box-shadow navigation absolute z-50 bg-white `}
+              } xl: transform  xl:translate-x-0  ease-in-out transition duration-500 flex justify-start items-start h-[92vh]  md:h-[100vh]  w-full sm:w-64  flex-col shadow navigation absolute z-50 bg-white `}
             >
               <div className="hidden xl:block xl:flex flex-col items-center py-5 mx-5  border-gray-400 border-b">
                 <div className="">
                   <img
                     src={man}
                     alt="Images of Kabid Hossain"
-                    className="img rainbow text-center"
+                    className="img rainbow text-center shadow"
                   />
                 </div>
                 <Link
-                  to="home"
+                  to="/home"
                   className="leading-8 text-4xl font-semibold text-gray-700 text-center pt-5"
                 >
                   <span className="">Kabid</span> Hassan
@@ -204,11 +203,12 @@ const Navigation = () => {
         <div className="col-span-10">
           <Routes>
             <Route path="/" element={<Works />} />
-            <Route path="home" element={<Works />} />
-            <Route path="works" element={<Works />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="about" element={<About />} />
-            <Route path="blog/*" element={<Blogs />} />
+            <Route path="/home" element={<Works />} />
+            <Route path="/works" element={<Works />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="blog" element={<BlogMain />} />
+            <Route path="/read/:id" element={<BlogMain />} />
           </Routes>
           <Outlet />
         </div>
