@@ -149,7 +149,7 @@ const Contact = () => {
             </Fade>
             <div className="col-span-1 p-5 z-50">
               <Fade bottom cascade>
-                <div class="md:p-6 flex flex-col justify-center c-address-section gap-y-2">
+                <div class="md:p-6 flex flex-col justify-center c-address-section gap-y-2 md:gap-y-2 ">
                   <address className="c-address">
                     <p className="c-address-icon">
                       <ImLocation2 />
@@ -176,30 +176,31 @@ const Contact = () => {
                     <p>kabidhasan@gmail.com</p>
                   </div>
                   <div>
-                    <div className="flex justify-evenly m-[15px] mt-10">
+                    <div className="flex justify-evenly m-[15px]">
                       <Link
                         to="#"
-                        className="text-2xl text-[#808080] shadow-md border border-gray-100  rounded-full p-4 hover:text-[#5a5a5a]  transition ease-in-out duration-300"
-                      >
-                        <BsGithub />
-                      </Link>
-                      <Link
-                        to="#"
-                        className=" text-2xl text-[#808080] shadow-md border border-gray-100  rounded-full p-4 hover:text-[#3b5998] transition ease-in-out duration-300"
+                        className=" text-2xl  shadow-md border border-gray-100  rounded-full p-4 text-[#3b5998] transition ease-in-out duration-300"
                       >
                         <BsFacebook />
                       </Link>
                       <Link
                         to="#"
-                        className="text-2xl text-[#808080] shadow-md border border-gray-100 rounded-full p-4 hover:text-[#bc2a8d] transition ease-in-out duration-300"
+                        className="text-2xl  shadow-md border border-gray-100 rounded-full p-4 text-[#bc2a8d] transition ease-in-out duration-300"
                       >
                         <BsInstagram />
                       </Link>
+
                       <Link
                         to="#"
-                        className=" text-2xl text-[#808080] shadow-md border border-gray-100 rounded-full p-4 hover:text-[#c8232c] transition ease-in-out duration-300"
+                        className=" text-2xl  shadow-md border border-gray-100 rounded-full p-4 text-[#c8232c] transition ease-in-out duration-300"
                       >
                         <BsPinterest />
+                      </Link>
+                      <Link
+                        to="#"
+                        className="text-2xl  shadow-md border border-gray-100  rounded-full p-4 text-[#5a5a5a]  transition ease-in-out duration-300"
+                      >
+                        <BsGithub />
                       </Link>
                     </div>
                   </div>

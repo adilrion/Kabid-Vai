@@ -169,30 +169,30 @@ const Navigation = () => {
                     <div className=" flex justify-between items-center w-full text-gray-600">
                       <Link
                         to="#"
-                        className="text-2xl bg p-2 hover:text-[#3b5998]"
-                      >
-                        <BsGithub />
-                      </Link>
-                      <Link
-                        to="#"
-                        className=" text-2xl bg p-2 hover:text-[#3b5998]"
+                        className=" text-2xl shadow-md border border-gray-100 rounded-full p-2 hover:text-[#3b5998]"
                       >
                         <BsFacebook />
                       </Link>
                       <Link
                         to="#"
-                        className="text-2xl bg p-2 hover:text-[#bc2a8d]"
+                        className="text-2xl shadow-md border border-gray-100 rounded-full p-2 hover:text-[#bc2a8d]"
                       >
                         <BsInstagram />
                       </Link>
                       <Link
                         to="#"
-                        className=" text-2xl bg p-2 hover:text-[#c8232c]"
+                        className="shadow-md border border-gray-100 rounded-full text-2xl p-2 hover:text-[#c8232c]"
                       >
                         <BsPinterest />
                       </Link>
+                      <Link
+                        to="#"
+                        className="text-2xl shadow-md border border-gray-100 rounded-full p-2 hover:text-[#3b5998]"
+                      >
+                        <BsGithub />
+                      </Link>
                     </div>
-                    <div className="text-center mt-5 text-sm text-gray-400">
+                    <div className="text-center mt-3 text-sm text-gray-400">
                       <p>Copyright © 2022 Kabid Hassan</p>
                     </div>
                   </div>

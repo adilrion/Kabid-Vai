@@ -15,12 +15,12 @@ const About = () => {
       <section className="c-about md:px-10">
         <nav className="c-header">
           <h1 className="">
-            <span className=" uppercase">About Me!😎</span>
+            <span className="uppercase">About Me!😎</span>
           </h1>
         </nav>
 
         <div className="c-header-details relative">
-          <div className="md:w-[600px] py-5 border-gray-400 border-b">
+          <div className="md:w-[600px] py-5 mx-5 border-gray-400 border-b">
             <Zoom>
               <h1>About Me!😎</h1>
             </Zoom>
@@ -108,11 +108,11 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:min-h-[540px] mt-20 md:mt-0 md:p-10 relative">
+          <div className="grid grid-cols-2 md:min-h-[540px] mt-20 md:mt-0 md:p-10 relative mb-10">
             <div className="col-span-2 order-last md:order-first md:col-span-1 h-auto relative flex justify-evenly items-center mx-5 bg-transparent">
               <div className="w-full flex flex-col justify-evenly bg-transparent items-center ">
                 <Fade bottom cascade>
-                  <div className="shape bg-transparent">
+                  <div className="shape shadow bg-transparent">
                     <p className="">Professional Biriyani Lover!😎</p>
                   </div>
                 </Fade>
