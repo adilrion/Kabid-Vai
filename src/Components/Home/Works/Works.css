@@ -48,15 +48,14 @@
 .art-section {
   transition: 0.4s;
   position: relative;
+  overflow: hidden;
 }
 
 .art-images {
-  transition: 0.4s;
+  transition: all 0.9s ease-in-out;
 }
 .art-section:hover .art-images {
-  filter: blur(1px) brightness(90%);
-  -webkit-filter: blur(1px) brightness(90%);
-  -moz-filter: blur(1px) brightness(90%);
+  transform: scale(1.04);
   cursor: pointer;
 }
 
