@@ -10,7 +10,11 @@ const BlogMain = () => {
     <section>
       <section className="header">
         <div className="b-card relative rounded-b flex justify-center shadow-md ">
-          {/* <img src="" alt="" /> */}
+          <img
+            src="https://images.unsplash.com/photo-1440778303588-435521a205bc?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
+            alt=""
+            className="w-full object-cover"
+          />
           <div className="b-card-title p-5 md:p-8 w-[96%]  md:w-[80%] lg:w-[50%] absolute bottom-2 md:bottom-3 md:left-3 lg:bottom-10   lg:left-10 rounded">
             <span className="text-xsm text-gray-500">
               <time dateTime="2001-05-15T19:00">15 May 2022</time>

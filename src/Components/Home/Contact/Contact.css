@@ -7,12 +7,12 @@
   background: rgb(255, 255, 255);
 }
 
-.c-shadow {
-  box-shadow: inset 0px 0px 15px -3px #808080;
+/* .c-shadow {
+  box-shadow: inset 0px 0px 15px -3px #808080; 
   font-family: "Redressed", cursive;
-  font-size: 25px;
+  font-size: 1rem;
   font-style: normal;
-}
+} */
 .c-header {
   top: 40%;
   left: 40%;
@@ -43,7 +43,7 @@
 .c-address {
   display: flex;
   align-items: center;
-  padding: 5px 10px;
+  /* padding: 15px 48px; */
   /* height: 60px; */
   margin: 15px;
   gap: 15px;
@@ -54,9 +54,9 @@
   color: #808080;
 }
 .c-bottom-icon {
-  position: absolute;
+  /*  position: absolute;
   bottom: -18%;
-  left: 40%;
+  left: 40%; */
   font-size: 50px;
   text-align: center;
   animation: bottom 3s ease-in-out infinite;
@@ -64,9 +64,9 @@
 
 @media only screen and (max-width: 48em) {
   .c-bottom-icon {
-    position: absolute;
-    bottom: -18%;
-    left: 10%;
+    /* position: absolute;
+    bottom: -22%;
+    left: 17%; */
     font-size: 50px;
     text-align: center;
   }

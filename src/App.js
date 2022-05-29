@@ -9,11 +9,11 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Version />} />
-          <Route path="/" element={<Version />} />
-          <Route path="home" element={<Version />} />
-          <Route path="v-english/*" element={<Navigation />} />
-          <Route path="v-bangla" element={<VersionBangla />} />
+          <Route index element={<Navigation />} />
+          <Route path="/*" element={<Navigation />} />
+          {/* <Route path="home" element={<Version />} />
+          <Route path="v-english" element={<Navigation />} />
+          <Route path="v-bangla" element={<VersionBangla />} /> */}
         </Routes>
       </BrowserRouter>
     </>

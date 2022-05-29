@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BsFacebook, BsGithub, BsInstagram, BsPinterest } from "react-icons/bs";
 import { Link, Outlet, Route, Routes } from "react-router-dom";
 import BlogMain from "../../Blogs/BlogMain";
+import ReadPage from "../../Blogs/ReadPage";
 import About from "../../Home/About/About";
 import Contact from "../../Home/Contact/Contact";
 import "../../Home/Version/Version.css";
@@ -125,7 +126,7 @@ const Navigation = () => {
               </div>
               <div className="mt-6 flex flex-col justify-start items-center  pl-4 w-full   space-y-6 pb-5 ">
                 <Link
-                  to="works"
+                  to="/works"
                   onClick={() => setShow(false)}
                   className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none focus:text-gray-800  text-gray-600 rounded "
                 >
@@ -134,7 +135,7 @@ const Navigation = () => {
                   </p>
                 </Link>
                 <Link
-                  to="contact"
+                  to="/contact"
                   onClick={() => setShow(false)}
                   className="flex jusitfy-start items-center w-full  space-x-6 focus:outline-none text-gray-600 focus:text-gray-800   rounded "
                 >
@@ -143,7 +144,7 @@ const Navigation = () => {
                   </p>
                 </Link>
                 <Link
-                  to="about"
+                  to="/about"
                   onClick={() => setShow(false)}
                   className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-gray-800  text-gray-600 rounded "
                 >
@@ -152,7 +153,7 @@ const Navigation = () => {
                   </p>
                 </Link>
                 <Link
-                  to="blog"
+                  to="/blog"
                   onClick={() => setShow(false)}
                   className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-gray-800  text-gray-600 rounded "
                 >
@@ -203,12 +204,12 @@ const Navigation = () => {
         <div className="col-span-10">
           <Routes>
             <Route path="/" element={<Works />} />
-            <Route path="/home" element={<Works />} />
-            <Route path="/works" element={<Works />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
+            <Route path="home" element={<Works />} />
+            <Route path="works" element={<Works />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="about" element={<About />} />
             <Route path="blog" element={<BlogMain />} />
-            <Route path="/read/:id" element={<BlogMain />} />
+            <Route path="read/:id" element={<ReadPage />} />
           </Routes>
           <Outlet />
         </div>

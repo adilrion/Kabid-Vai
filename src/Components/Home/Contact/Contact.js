@@ -42,7 +42,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative px-10">
+    <section className="relative">
       <nav className="c-header z-40">
         <h1 className="">
           <span className=" uppercase">Contact Me!</span>
@@ -51,7 +51,7 @@ const Contact = () => {
 
       <div className="c-contact">
         <div className="c-header-details">
-          <div className="md:w-[600px] py-5 border-gray-400 border-b mx-24">
+          <div className="md:w-[600px] py-5 border-gray-400 border-b mx-8 md:mx-24">
             <Zoom>
               <h1>DON'T BE SHY</h1>
             </Zoom>
@@ -64,7 +64,7 @@ const Contact = () => {
             </Fade>
           </div>
         </div>
-        <div className="relative grid md:grid-cols-2 items-center justify-center  z-40">
+        <div className="relative grid md:grid-cols-2 items-center justify-center  z-40 px-10">
           <div className="col-span-1 order-last md:order-first">
             <Fade bottom cascade>
               <div class="md:p-6 flex flex-col justify-center">
@@ -74,7 +74,7 @@ const Contact = () => {
                   </p>
                 </div>
 
-                <form className="z-40 bg-transparent" onSubmit={sendEmail}>
+                <form className="z-40 -transparent" onSubmit={sendEmail}>
                   <div class="flex flex-col">
                     <label htmlFor="name" class="hidden">
                       Full Name
@@ -84,7 +84,7 @@ const Contact = () => {
                       name="name"
                       id="name"
                       placeholder="Full Name"
-                      class="w-100 mt-2 py-2 px-3 rounded    c-shadow min-h-full text-gray-800 focus:outline-none bg-transparent"
+                      class="w-100 mt-2 py-2 px-3 rounded shadow text-md border  min-h-full text-gray-800 focus:outline-none -transparent"
                     />
                   </div>
 
@@ -97,7 +97,7 @@ const Contact = () => {
                       name="email"
                       id="email"
                       placeholder="Email"
-                      class="w-100 mt-2 py-2 px-3 rounded    c-shadow min-h-full text-gray-800 focus:outline-none bg-transparent"
+                      class="w-100 mt-2 py-2 px-3 rounded    shadow text-md border  min-h-full text-gray-800 focus:outline-none -transparent"
                     />
                   </div>
 
@@ -110,13 +110,13 @@ const Contact = () => {
                       name="message"
                       id="text"
                       placeholder="Type your message"
-                      class="w-100 mt-2 py-2 px-3 min-h-[200px] rounded    c-shadow min-h-full text-gray-800 focus:outline-none bg-transparent"
+                      class="w-100 mt-2 py-2 px-3 min-h-[200px] rounded    shadow text-md border  min-h-full text-gray-800 focus:outline-none -transparent"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    class="w-full c-shadow  bg-[#808080] text-white font-bold py-3 px-6 rounded mt-3 hover:bg-[#5a5a5a]  transition ease-in-out duration-300"
+                    class="w-full bg-[#3f3d56] text-white font-bold py-3 px-6 rounded mt-3 hover:-[#5a5a5a]  transition ease-in-out duration-300"
                   >
                     Send
                   </button>
@@ -126,29 +126,30 @@ const Contact = () => {
           </div>
           <Fade bottom cascade>
             <div className="col-span-1  p-5">
-              <img src={contactMe} width="100%" alt="" />
+              <img className="w-full" src={contactMe} alt="" />
             </div>
           </Fade>
-          <Zoom>
-            <div className="c-bottom-icon">
-              <h1>
-                <TiArrowForward />
-              </h1>
+          {/* <Zoom> */}
 
-              <p className="text-3xl">Or You Can Find Me</p>
-            </div>
-          </Zoom>
+          {/* </Zoom> */}
         </div>
-        <div className="mt-32 md:mt-20">
+        <div className="c-bottom-icon z-50">
+          <h1>
+            <TiArrowForward />
+          </h1>
+
+          <p className="text-3xl">Or You Can Find Me</p>
+        </div>
+        <div className="">
           <div className="md:grid grid-cols-2 items-center justify-center  z-50">
             <Fade bottom cascade>
               <div className="col-span-1 p-5">
                 <img src={contactMe2} width="100%" alt="" />
               </div>
             </Fade>
-            <div className="col-span-1 p-5 z-40">
+            <div className="col-span-1 p-5 z-50">
               <Fade bottom cascade>
-                <div class="md:p-6 flex flex-col justify-center c-address-section">
+                <div class="md:p-6 flex flex-col justify-center c-address-section gap-y-2">
                   <address className="c-address">
                     <p className="c-address-icon">
                       <ImLocation2 />
@@ -168,35 +169,35 @@ const Contact = () => {
                       <p>+00 8893513546</p>
                     </div>
                   </div>
-                  <div className="c-address">
-                    <p className="c-address-icon">
+                  <div className="c-address ">
+                    <p className="c-address-icon ">
                       <ImMail3 />
                     </p>
                     <p>kabidhasan@gmail.com</p>
                   </div>
                   <div>
-                    <div className="flex justify-evenly m-[15px]">
+                    <div className="flex justify-evenly m-[15px] mt-10">
                       <Link
                         to="#"
-                        className="text-2xl text-[#808080] bg p-2 hover:text-[#5a5a5a]  transition ease-in-out duration-300"
+                        className="text-2xl text-[#808080] shadow-md border border-gray-100  rounded-full p-4 hover:text-[#5a5a5a]  transition ease-in-out duration-300"
                       >
                         <BsGithub />
                       </Link>
                       <Link
                         to="#"
-                        className=" text-2xl text-[#808080] bg p-2 hover:text-[#3b5998] transition ease-in-out duration-300"
+                        className=" text-2xl text-[#808080] shadow-md border border-gray-100  rounded-full p-4 hover:text-[#3b5998] transition ease-in-out duration-300"
                       >
                         <BsFacebook />
                       </Link>
                       <Link
                         to="#"
-                        className="text-2xl text-[#808080] bg p-2 hover:text-[#bc2a8d] transition ease-in-out duration-300"
+                        className="text-2xl text-[#808080] shadow-md border border-gray-100 rounded-full p-4 hover:text-[#bc2a8d] transition ease-in-out duration-300"
                       >
                         <BsInstagram />
                       </Link>
                       <Link
                         to="#"
-                        className=" text-2xl text-[#808080] bg p-2 hover:text-[#c8232c] transition ease-in-out duration-300"
+                        className=" text-2xl text-[#808080] shadow-md border border-gray-100 rounded-full p-4 hover:text-[#c8232c] transition ease-in-out duration-300"
                       >
                         <BsPinterest />
                       </Link>
