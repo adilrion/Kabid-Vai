@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { BsFacebook, BsGithub, BsInstagram, BsPinterest } from "react-icons/bs";
+import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { Link, Outlet, Route, Routes } from "react-router-dom";
-import BlogMain from "../../Blogs/BlogMain";
+import Blog from "../../Blogs/Blog";
 import ReadPage from "../../Blogs/ReadPage";
 import About from "../../Home/About/About";
 import Contact from "../../Home/Contact/Contact";
@@ -128,7 +128,7 @@ const Navigation = () => {
                 <Link
                   to="/works"
                   onClick={() => setShow(false)}
-                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none focus:text-gray-800  text-gray-600 rounded "
+                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none focus:text-gray-900  text-gray-600 rounded "
                 >
                   <p className="text-base text-[18px] font-medium  leading-4 ">
                     Works
@@ -137,7 +137,7 @@ const Navigation = () => {
                 <Link
                   to="/contact"
                   onClick={() => setShow(false)}
-                  className="flex jusitfy-start items-center w-full  space-x-6 focus:outline-none text-gray-600 focus:text-gray-800   rounded "
+                  className="flex jusitfy-start items-center w-full  space-x-6 focus:outline-none text-gray-600 focus:text-gray-900   rounded "
                 >
                   <p className="text-base text-[18px] font-medium leading-4 ">
                     Contact
@@ -146,7 +146,7 @@ const Navigation = () => {
                 <Link
                   to="/about"
                   onClick={() => setShow(false)}
-                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-gray-800  text-gray-600 rounded "
+                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-gray-900  text-gray-600 rounded "
                 >
                   <p className="text-base text-[18px] font-medium leading-4  ">
                     About
@@ -155,7 +155,7 @@ const Navigation = () => {
                 <Link
                   to="/blog"
                   onClick={() => setShow(false)}
-                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-gray-800  text-gray-600 rounded "
+                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-gray-900  text-gray-600 rounded "
                 >
                   <p className="text-base text-[18px] font-medium leading-4  ">
                     Blog
@@ -181,9 +181,9 @@ const Navigation = () => {
                       </Link>
                       <Link
                         to="#"
-                        className="shadow-md border border-gray-100 rounded-full text-2xl p-2 hover:text-[#c8232c]"
+                        className="shadow-md border border-gray-100 rounded-full text-2xl p-2 hover:text-[#0078c7]"
                       >
-                        <BsPinterest />
+                        <BsLinkedin />
                       </Link>
                       <Link
                         to="#"
@@ -208,7 +208,7 @@ const Navigation = () => {
             <Route path="works" element={<Works />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
-            <Route path="blog" element={<BlogMain />} />
+            <Route path="blog" element={<Blog />} />
             <Route path="read/:id" element={<ReadPage />} />
           </Routes>
           <Outlet />
