@@ -10,6 +10,12 @@ const blog = [
     des: `dolor sit amet consectetur adipisicing elit. Nostrum,
   ex.Lorem ipsum dolor sit amet consectetur adipisicing
   elit. Omnis, maiores Lorem ipsum dolor sit amet. this is
+  the best    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis voluptatem quo repellat at. Nihil odio deleniti aliquid quis molestias explicabo, provident modi voluptatibus! Libero maxime voluptas ullam, ab eveniet nesciunt aliquam deserunt repudiandae soluta at velit doloremque tempore esse vitae beatae atque hic quasi, et temporibus ratione pariatur quam fuga. Laudantium a omnis porro temporibus minus, voluptates maxime labore quaerat asperiores nam quisquam corporis ipsa eaque. Odio molestiae labore possimus illo ipsum dolore ducimus nulla, ut, quod quisquam et tenetur tempore veritatis facere. Unde, recusandae sit! Sequi eos deserunt nobis quia saepe suscipit laudantium pariatur fugit. Quos, odit eveniet. dolor sit amet consectetur adipisicing elit. Nostrum,
+  ex.Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Omnis, maiores Lorem ipsum dolor sit amet. this is
+  the best    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis voluptatem quo repellat at. Nihil odio deleniti aliquid quis molestias explicabo, provident modi voluptatibus! Libero maxime voluptas ullam, ab eveniet nesciunt aliquam deserunt repudiandae soluta at velit doloremque tempore esse vitae beatae atque hic quasi, et temporibus ratione pariatur quam fuga. Laudantium a omnis porro temporibus minus, voluptates maxime labore quaerat asperiores nam quisquam corporis ipsa eaque. Odio molestiae labore possimus illo ipsum dolore ducimus nulla, ut, quod quisquam et tenetur tempore veritatis facere. Unde, recusandae sit! Sequi eos deserunt nobis quia saepe suscipit laudantium pariatur fugit. Quos, odit eveniet. dolor sit amet consectetur adipisicing elit. Nostrum,
+  ex.Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Omnis, maiores Lorem ipsum dolor sit amet. this is
   the best    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis voluptatem quo repellat at. Nihil odio deleniti aliquid quis molestias explicabo, provident modi voluptatibus! Libero maxime voluptas ullam, ab eveniet nesciunt aliquam deserunt repudiandae soluta at velit doloremque tempore esse vitae beatae atque hic quasi, et temporibus ratione pariatur quam fuga. Laudantium a omnis porro temporibus minus, voluptates maxime labore quaerat asperiores nam quisquam corporis ipsa eaque. Odio molestiae labore possimus illo ipsum dolore ducimus nulla, ut, quod quisquam et tenetur tempore veritatis facere. Unde, recusandae sit! Sequi eos deserunt nobis quia saepe suscipit laudantium pariatur fugit. Quos, odit eveniet.`,
     writer: "Uganda Nibashi",
     img: "https://images.unsplash.com/photo-1609685198105-d67e7a970497?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
@@ -126,6 +132,102 @@ const Blog = () => {
                 );
               })}
             </div>
+            <div className="flex items-center justify-center py-10 lg:px-0 sm:px-6 px-4">
+              <div className="lg:w-3/5 w-full  flex items-center justify-between border-t border-gray-200 mx-5 md:mx-0">
+                <div className="flex items-center pt-3 text-gray-600 hover:text-gray-900 cursor-pointer">
+                  <svg
+                    width={14}
+                    height={8}
+                    viewBox="0 0 14 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.1665 4H12.8332"
+                      stroke="currentColor"
+                      strokeWidth="1.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M1.1665 4L4.49984 7.33333"
+                      stroke="currentColor"
+                      strokeWidth="1.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M1.1665 4.00002L4.49984 0.666687"
+                      stroke="currentColor"
+                      strokeWidth="1.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <p className="text-sm ml-3 font-medium leading-none ">
+                    Previous
+                  </p>
+                </div>
+                <div className="sm:flex hidden">
+                  <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
+                    1
+                  </p>
+                  <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
+                    2
+                  </p>
+                  <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
+                    3
+                  </p>
+                  <p className="text-sm font-medium leading-none cursor-pointer text-gray-900 border-t border-gray-900 pt-3 mr-4 px-2">
+                    4
+                  </p>
+                  <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
+                    5
+                  </p>
+                  <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
+                    6
+                  </p>
+                  <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
+                    7
+                  </p>
+                  <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
+                    8
+                  </p>
+                </div>
+                <div className="flex items-center pt-3 text-gray-600 hover:text-gray-900 cursor-pointer">
+                  <p className="text-sm font-medium leading-none mr-3 ">Next</p>
+                  <svg
+                    width={14}
+                    height={8}
+                    viewBox="0 0 14 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.1665 4H12.8332"
+                      stroke="currentColor"
+                      strokeWidth="1.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M9.5 7.33333L12.8333 4"
+                      stroke="currentColor"
+                      strokeWidth="1.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M9.5 0.666687L12.8333 4.00002"
+                      stroke="currentColor"
+                      strokeWidth="1.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </section>
           <aside className=" col-span-12 lg:col-span-4 w-full ">
             <div className="mx-5 md:mx-0">
@@ -137,101 +239,6 @@ const Blog = () => {
         </section>
         {/* End Bottom Blog Section */}
       </article>
-
-      <div className="flex items-center justify-center py-10 lg:px-0 sm:px-6 px-4">
-        <div className="lg:w-3/5 w-full  flex items-center justify-between border-t border-gray-200 mx-5 md:mx-0">
-          <div className="flex items-center pt-3 text-gray-600 hover:text-gray-900 cursor-pointer">
-            <svg
-              width={14}
-              height={8}
-              viewBox="0 0 14 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.1665 4H12.8332"
-                stroke="currentColor"
-                strokeWidth="1.25"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M1.1665 4L4.49984 7.33333"
-                stroke="currentColor"
-                strokeWidth="1.25"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M1.1665 4.00002L4.49984 0.666687"
-                stroke="currentColor"
-                strokeWidth="1.25"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <p className="text-sm ml-3 font-medium leading-none ">Previous</p>
-          </div>
-          <div className="sm:flex hidden">
-            <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
-              1
-            </p>
-            <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
-              2
-            </p>
-            <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
-              3
-            </p>
-            <p className="text-sm font-medium leading-none cursor-pointer text-gray-900 border-t border-gray-900 pt-3 mr-4 px-2">
-              4
-            </p>
-            <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
-              5
-            </p>
-            <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
-              6
-            </p>
-            <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
-              7
-            </p>
-            <p className="text-sm font-medium leading-none cursor-pointer text-gray-600 hover:text-gray-900 border-t border-transparent hover:border-gray-900 pt-3 mr-4 px-2">
-              8
-            </p>
-          </div>
-          <div className="flex items-center pt-3 text-gray-600 hover:text-gray-900 cursor-pointer">
-            <p className="text-sm font-medium leading-none mr-3 ">Next</p>
-            <svg
-              width={14}
-              height={8}
-              viewBox="0 0 14 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.1665 4H12.8332"
-                stroke="currentColor"
-                strokeWidth="1.25"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M9.5 7.33333L12.8333 4"
-                stroke="currentColor"
-                strokeWidth="1.25"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M9.5 0.666687L12.8333 4.00002"
-                stroke="currentColor"
-                strokeWidth="1.25"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
