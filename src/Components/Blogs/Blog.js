@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import "./Blog.css";
 import { pageTitle } from "../Utils/Title";
+import "./Blog.css";
 import RecentBlog from "./RecentBlog";
 
 const blog = [
@@ -78,7 +78,7 @@ const Blog = () => {
                   to="#"
                   className="ml-1 font-light text-gray-500 text-sm hover:underline hover:text-[#5da0de]"
                 >
-                  ...see more
+                  ...Read more
                 </Link>
               </p>
             </div>
@@ -120,7 +120,7 @@ const Blog = () => {
                             state={{ data }}
                             className="ml-1 font-extralight text-gray-500 text-sm hover:underline hover:text-[#5da0de]"
                           >
-                            ...see more
+                            ...Read more
                           </Link>
                         </p>
                         <span className="text-xsm text-gray-500 ">

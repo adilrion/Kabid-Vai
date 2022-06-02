@@ -1,14 +1,50 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SrcBar from "../Utils/SrcBar";
 import "./Blog.css";
 
 const blog = [
-  { title: "", des: "", writer: "", img: "" },
-  { title: "", des: "", writer: "", img: "" },
-  { title: "", des: "", writer: "", img: "" },
-  { title: "", des: "", writer: "", img: "" },
-  { title: "", des: "", writer: "", img: "" },
-  { title: "", des: "", writer: "", img: "" },
+  {
+    title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    des: `dolor sit amet consectetur adipisicing elit. Nostrum,
+  ex.Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Omnis, maiores Lorem ipsum dolor sit amet. this is
+  the best    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis voluptatem quo repellat at. Nihil odio deleniti aliquid quis molestias explicabo, provident modi voluptatibus! Libero maxime voluptas ullam, ab eveniet nesciunt aliquam deserunt repudiandae soluta at velit doloremque tempore esse vitae beatae atque hic quasi, et temporibus ratione pariatur quam fuga. Laudantium a omnis porro temporibus minus, voluptates maxime labore quaerat asperiores nam quisquam corporis ipsa eaque. Odio molestiae labore possimus illo ipsum dolore ducimus nulla, ut, quod quisquam et tenetur tempore veritatis facere. Unde, recusandae sit! Sequi eos deserunt nobis quia saepe suscipit laudantium pariatur fugit. Quos, odit eveniet. dolor sit amet consectetur adipisicing elit. Nostrum,
+  ex.Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Omnis, maiores Lorem ipsum dolor sit amet. this is
+  the best    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis voluptatem quo repellat at. Nihil odio deleniti aliquid quis molestias explicabo, provident modi voluptatibus! Libero maxime voluptas ullam, ab eveniet nesciunt aliquam deserunt repudiandae soluta at velit doloremque tempore esse vitae beatae atque hic quasi, et temporibus ratione pariatur quam fuga. Laudantium a omnis porro temporibus minus, voluptates maxime labore quaerat asperiores nam quisquam corporis ipsa eaque. Odio molestiae labore possimus illo ipsum dolore ducimus nulla, ut, quod quisquam et tenetur tempore veritatis facere. Unde, recusandae sit! Sequi eos deserunt nobis quia saepe suscipit laudantium pariatur fugit. Quos, odit eveniet. dolor sit amet consectetur adipisicing elit. Nostrum,
+  ex.Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Omnis, maiores Lorem ipsum dolor sit amet. this is
+  the best    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis voluptatem quo repellat at. Nihil odio deleniti aliquid quis molestias explicabo, provident modi voluptatibus! Libero maxime voluptas ullam, ab eveniet nesciunt aliquam deserunt repudiandae soluta at velit doloremque tempore esse vitae beatae atque hic quasi, et temporibus ratione pariatur quam fuga. Laudantium a omnis porro temporibus minus, voluptates maxime labore quaerat asperiores nam quisquam corporis ipsa eaque. Odio molestiae labore possimus illo ipsum dolore ducimus nulla, ut, quod quisquam et tenetur tempore veritatis facere. Unde, recusandae sit! Sequi eos deserunt nobis quia saepe suscipit laudantium pariatur fugit. Quos, odit eveniet.`,
+    writer: "Uganda Nibashi",
+    img: "https://images.unsplash.com/photo-1609685198105-d67e7a970497?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+    id: 1,
+  },
+  {
+    title: " Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    des: `dolor sit amet consectetur adipisicing elit. Nostrum,
+  ex.Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Omnis, maiores Lorem ipsum dolor sit amet. this is
+  the best    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis voluptatem quo repellat at. Nihil odio deleniti aliquid quis molestias explicabo, provident modi voluptatibus! Libero maxime voluptas ullam, ab eveniet nesciunt aliquam deserunt repudiandae soluta at velit doloremque tempore esse vitae beatae atque hic quasi, et temporibus ratione pariatur quam fuga. Laudantium a omnis porro temporibus minus, voluptates maxime labore quaerat asperiores nam quisquam corporis ipsa eaque. Odio molestiae labore possimus illo ipsum dolore ducimus nulla, ut, quod quisquam et tenetur tempore veritatis facere. Unde, recusandae sit! Sequi eos deserunt nobis quia saepe suscipit laudantium pariatur fugit. Quos, odit eveniet.`,
+    writer: "japan Nibashi",
+    img: "https://images.unsplash.com/photo-1609685198105-d67e7a970497?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+    id: 7,
+  },
+  {
+    title: " Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    des: `dolor sit amet consectetur adipisicing elit. Nostrum,
+  ex.Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Omnis, maiores Lorem ipsum dolor sit amet. this is
+  the best    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis voluptatem quo repellat at. Nihil odio deleniti aliquid quis molestias explicabo, provident modi voluptatibus! Libero maxime voluptas ullam, ab eveniet nesciunt aliquam deserunt repudiandae soluta at velit doloremque tempore esse vitae beatae atque hic quasi, et temporibus ratione pariatur quam fuga. Laudantium a omnis porro temporibus minus, voluptates maxime labore quaerat asperiores nam quisquam corporis ipsa eaque. Odio molestiae labore possimus illo ipsum dolore ducimus nulla, ut, quod quisquam et tenetur tempore veritatis facere. Unde, recusandae sit! Sequi eos deserunt nobis quia saepe suscipit laudantium pariatur fugit. Quos, odit eveniet.`,
+    writer: "fucking Nibashi",
+    img: "https://images.unsplash.com/photo-1609685198105-d67e7a970497?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+    id: 8,
+  },
+  { title: "", des: "", writer: "", img: "", id: 2 },
+  { title: "", des: "", writer: "", img: "", id: 3 },
+  { title: "", des: "", writer: "", img: "", id: 4 },
+  { title: "", des: "", writer: "", img: "", id: 5 },
+  { title: "", des: "", writer: "", img: "", id: 6 },
 ];
 
 const RecentBlog = () => {
@@ -39,6 +75,13 @@ const RecentBlog = () => {
                 <p className="text-gray-600">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Provident, sed.
+                  <Link
+                    to={`/read/${data.id}`}
+                    state={{ data }}
+                    className="ml-1 font-extralight text-gray-500 text-sm hover:underline hover:text-[#5da0de]"
+                  >
+                    ...Read more
+                  </Link>
                 </p>
               </div>
             </div>
