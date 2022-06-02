@@ -67,10 +67,10 @@ const Blog = () => {
               <span className="text-xsm text-gray-500">
                 <time dateTime="2001-05-15T19:00">15 May 2022</time>
               </span>
-              <p className="text-gray-700 leading-8 mb-2 text-xl md:text-2xl font-semibold">
+              <p className="text-[#292929] leading-8 mb-2 text-xl md:text-2xl font-semibold">
                 Lorem ipsum dolor sit amet, consectetur adipisicing
               </p>
-              <p className=" text-gray-600">
+              <p className=" text-[#292929] text-lg">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
                 placeat quas neque similique doloribus autem sint mollitia minus
                 vitae ipsum quibusdam
@@ -106,11 +106,11 @@ const Blog = () => {
                     </div>
                     <div className="c-b-des col-span-1 flex flex-col justify-center">
                       <div className="c-b-title flex flex-col gap-2">
-                        <p className="text-gray-700 leading-8 mb-2 text-xl md:text-2xl font-semibold">
+                        <p className="text-[#292929] leading-8 mb-2 text-xl md:text-2xl font-semibold">
                           Lorem ipsum dolor sit amet consectetur, adipisicing
                           elit.
                         </p>
-                        <p className=" text-gray-600">
+                        <p className=" text-[#292929] text-lg">
                           dolor sit amet consectetur adipisicing elit. Nostrum,
                           ex.Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Omnis, maiores Lorem ipsum dolor sit amet. this

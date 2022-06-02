@@ -120,7 +120,7 @@ const Works = () => {
                   <img
                     src={data.src}
                     alt="#"
-                    className="w-full h-full object-center object-cover rounded art-images "
+                    className="w-full h-full object-center object-cover art-images "
                   />
 
                   <div class="">

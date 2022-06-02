@@ -49,14 +49,17 @@
   transition: 0.4s;
   position: relative;
   overflow: hidden;
+  border-radius: 4px;
 }
 
 .art-images {
   transition: all 0.9s ease-in-out;
+  /* border-radius: 2px; */
 }
 .art-section:hover .art-images {
   transform: scale(1.04);
   cursor: pointer;
+  /* border-radius: 2px; */
 }
 
 .text {

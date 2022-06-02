@@ -30,7 +30,7 @@ const ReadPage = () => {
           <span className="text-xsm text-gray-600">
             <time dateTime="2001-05-15T19:00">15 May 2022</time>
           </span>
-          <p className="text-gray-800 leading-8 mb-2 text-xl md:text-2xl font-semibold">
+          <p className="text-[#292929] leading-8 mb-2 text-xl md:text-2xl font-semibold">
             {title || ".."}
           </p>
           <p className="text-xs text-gray-600">{writer || ".."}</p>
@@ -39,8 +39,10 @@ const ReadPage = () => {
 
       <article className="grid grid-cols-12 gap-5 mt-8 sm:mx-2 md:mx-8">
         <section className="col-span-12 lg:col-span-8">
-          <div>{des || ".."}</div>
-
+          <div>
+            <p className=" text-[#292929] text-lg"> {des || ".."}</p>
+          </div>
+          {/* Sharing section */}
           <div className="w-full flex justify-center ">
             <section className="sharing-section  p-7 mt-10 rounded-md">
               <p className="text-2xl text-gray-400 border-b pb-2">
