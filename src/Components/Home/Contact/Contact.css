@@ -4,7 +4,7 @@
   -moz-border-radius: 0px 135px 73px 89px; */
   /* border: 1px solid #e9e5e5; */
 
-  background: rgb(255, 255, 255);
+  /* background: rgb(255, 255, 255); */
 }
 
 /* .c-shadow {
@@ -48,11 +48,11 @@
   margin: 15px;
   gap: 15px;
 }
-.c-address-icon {
+/* .c-address-icon {
   font-size: 1.5rem;
   line-height: 2rem;
   color: #808080;
-}
+} */
 .c-bottom-icon {
   /*  position: absolute;
   bottom: -18%;
