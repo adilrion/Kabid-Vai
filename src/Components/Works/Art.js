@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import { Zoom } from "react-reveal";
 import Viewer from "react-viewer";
-import { pageTitle } from "../../Utils/Title";
+import { pageTitle } from "../Utils/Title";
 
 import "./Works.css";
 
@@ -52,7 +52,7 @@ const library = [
   {
     id: "9",
     title: "S",
-    src: "https://media.istockphoto.com/photos/hot-air-balloons-flying-over-the-botan-canyon-in-turkey-picture-id1297349747?b=1&k=20&m=1297349747&s=170667a&w=0&h=oH31fJty_4xWl_JQ4OIQWZKP8C6ji9Mz7L4XmEnbqRU=",
+    src: "  ",
   },
   {
     id: "10",
@@ -78,6 +78,7 @@ const library = [
 
 const Works = () => {
   pageTitle("Works");
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [visible, setVisible] = useState(false);
   return (
@@ -120,7 +121,7 @@ const Works = () => {
                   <img
                     src={data.src}
                     alt="#"
-                    className="w-full h-full object-center object-cover art-images "
+                    className="w-full h-full object-center object-cover aspect-video  art-images "
                   />
 
                   <div class="">

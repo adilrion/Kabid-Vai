@@ -14,7 +14,6 @@ import RecentBlog from "./RecentBlog";
 
 const ReadPage = () => {
   const { title, img, des, id, writer } = useLocation().state.data;
-  // console.log(id);
   return (
     <section>
       <section className="b-card relative rounded-b flex justify-center shadow-md ">

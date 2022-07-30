@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { Link, Outlet, Route, Routes } from "react-router-dom";
 import Blog from "../../Blogs/Blog";
@@ -6,10 +7,11 @@ import ReadPage from "../../Blogs/ReadPage";
 import About from "../../Home/About/About";
 import Contact from "../../Home/Contact/Contact";
 import "../../Home/Version/Version.css";
-import Works from "../../Home/Works/Works";
+import Works from "../../Works/Art";
 import man from "../../Shared/Images/man.png";
 import "./Navigation.css";
 const Navigation = () => {
+  const client = new QueryClient();
   const [show, setShow] = useState(false);
 
   return (
@@ -126,23 +128,24 @@ const Navigation = () => {
               </div>
               <div className="mt-6 flex flex-col justify-start items-center  pl-4 w-full   space-y-6 pb-5 ">
                 <Link
-                  to="/works"
+                  to="/art"
                   onClick={() => setShow(false)}
                   className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none focus:text-gray-900  text-gray-600 rounded "
                 >
                   <p className="text-base text-[18px] font-medium  leading-4 ">
-                    Works
+                    Art
                   </p>
                 </Link>
                 <Link
-                  to="/contact"
+                  to="/blog"
                   onClick={() => setShow(false)}
-                  className="flex jusitfy-start items-center w-full  space-x-6 focus:outline-none text-gray-600 focus:text-gray-900   rounded "
+                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-gray-900  text-gray-600 rounded "
                 >
-                  <p className="text-base text-[18px] font-medium leading-4 ">
-                    Contact
+                  <p className="text-base text-[18px] font-medium leading-4  ">
+                    Blog
                   </p>
                 </Link>
+
                 <Link
                   to="/about"
                   onClick={() => setShow(false)}
@@ -153,12 +156,12 @@ const Navigation = () => {
                   </p>
                 </Link>
                 <Link
-                  to="/blog"
+                  to="/contact"
                   onClick={() => setShow(false)}
-                  className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-gray-900  text-gray-600 rounded "
+                  className="flex jusitfy-start items-center w-full  space-x-6 focus:outline-none text-gray-600 focus:text-gray-900   rounded "
                 >
-                  <p className="text-base text-[18px] font-medium leading-4  ">
-                    Blog
+                  <p className="text-base text-[18px] font-medium leading-4 ">
+                    Contact
                   </p>
                 </Link>
               </div>
@@ -201,15 +204,29 @@ const Navigation = () => {
             </div>
           </nav>
         </div>
-        <div className="col-span-10">
+        <div className="col-span-10 min-h-screen">
           <Routes>
             <Route path="/" element={<Works />} />
             <Route path="home" element={<Works />} />
-            <Route path="works" element={<Works />} />
+            <Route path="art" element={<Works />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
-            <Route path="blog" element={<Blog />} />
-            <Route path="read/:id" element={<ReadPage />} />
+            <Route
+              path="blog"
+              element={
+                <QueryClientProvider client={client}>
+                  <Blog />
+                </QueryClientProvider>
+              }
+            />
+            <Route
+              path="read/:id"
+              element={
+                <QueryClientProvider client={client}>
+                  <ReadPage />
+                </QueryClientProvider>
+              }
+            />
           </Routes>
           <Outlet />
         </div>
