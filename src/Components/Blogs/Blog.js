@@ -14,10 +14,8 @@ const Blog = () => {
   const { data, isLoading, isError, error } = useQuery(["blog"], () =>
     getBlog()
   );
-  console.log(data);
 
   const slice = (data) => data?.slice(0, 250);
-
   // Pagination Function
 
   const itemsPerPage = 5;
@@ -80,8 +78,8 @@ const Blog = () => {
                         <p className=" text-[#292929] text-lg ">
                           {slice(data?.excerpt) || `...`}
                           <Link
-                            to={`/read/${data?.title || "@"}`}
-                            state={{ data }}
+                            to={`/read/${data?._id}`}
+                            // state={{ data: `${data?.title}` }}
                             className="ml-1 font-extralight text-gray-500 text-sm hover:underline hover:text-[#5da0de]"
                           >
                             ...Read more

@@ -43,13 +43,12 @@ const RecentBlog = () => {
       <article className="mt-4 mx-2 overflow-y-auto min-h-screen">
         {data?.slice(0, 10).map((data, index) => {
           return (
-            <div className="mb-5 border-b py-2 mt-2">
+            <div key={index} className="mb-5 border-b py-2 mt-2">
               <h3 className="text-gray-700">{title(data?.title)}</h3>
               <p className="text-gray-600">
                 {excerpt(data?.excerpt)}
                 <Link
-                  to={`/read/${data.id}`}
-                  state={{ data }}
+                  to={`/read/${data._id}`}
                   className="ml-1 font-extralight text-gray-500 text-sm hover:underline hover:text-[#5da0de]"
                 >
                   ...Read more

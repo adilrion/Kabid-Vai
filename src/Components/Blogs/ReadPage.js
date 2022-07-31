@@ -1,3 +1,4 @@
+import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import {
   BsFacebook,
@@ -8,20 +9,42 @@ import {
   BsLinkedin,
 } from "react-icons/bs";
 
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
+import { getBlog, getSingleBlog } from "../Hooks/getApi";
+import useServer from "../Hooks/useServer";
+import Spinner from "../Utils/Spinner";
 import "./Blog.css";
 import RecentBlog from "./RecentBlog";
 
 const ReadPage = () => {
-  const { title, img, des, id, writer } = useLocation().state.data;
+  // const { title, img, des, _id } = useLocation().state.data;
+  // console.log(useLocation().state.data);
+
+  const { id } = useParams();
+  const { data, isLoading, isError, error } = useServer(id);
+  console.log(data);
+
+  if (isLoading) {
+    return (
+      <div className="absolute  top-1/4 left-2/4 w-12 h-12 bg-gray-50 shadow rounded-full flex justify-center items-center">
+        <Spinner />
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <span className="absolute min-h-screen top-2/4 left-2/4">
+        There was an server site {error.message}
+      </span>
+    );
+  }
+
   return (
     <section>
       <section className="b-card relative rounded-b flex justify-center shadow-md ">
         <img
-          src={
-            img ||
-            "https://images.unsplash.com/photo-1546074177-ffdda98d214f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-          }
+          src={data?.cover_img}
           alt=""
           className="w-full object-cover rounded-b"
         />
@@ -30,16 +53,19 @@ const ReadPage = () => {
             <time dateTime="2001-05-15T19:00">15 May 2022</time>
           </span>
           <p className="text-[#292929] leading-8 mb-2 text-xl md:text-2xl font-semibold">
-            {title || ".."}
+            {data?.title || ".."}
           </p>
-          <p className="text-xs text-gray-600">{writer || ".."}</p>
+          <p className="text-xs text-gray-600">Kabid Hassan</p>
         </div>
       </section>
 
       <article className="grid grid-cols-12 gap-5 mt-8 sm:mx-2 md:mx-8">
         <section className="col-span-12 lg:col-span-8">
           <div>
-            <p className=" text-[#292929] text-lg"> {des || ".."}</p>
+            <div
+              className="post__description text-[#292929] text-lg "
+              dangerouslySetInnerHTML={{ __html: data?.blog }}
+            />
           </div>
           {/* Sharing section */}
           <div className="w-full flex justify-center ">

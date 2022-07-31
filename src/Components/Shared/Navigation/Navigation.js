@@ -1,5 +1,4 @@
-import React, { Suspense, useState } from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import React, { useState } from "react";
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { Link, Outlet, Route, Routes } from "react-router-dom";
 import Blog from "../../Blogs/Blog";
@@ -11,7 +10,6 @@ import Works from "../../Works/Art";
 import man from "../../Shared/Images/man.png";
 import "./Navigation.css";
 const Navigation = () => {
-  const client = new QueryClient();
   const [show, setShow] = useState(false);
 
   return (
@@ -211,22 +209,8 @@ const Navigation = () => {
             <Route path="art" element={<Works />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
-            <Route
-              path="blog"
-              element={
-                <QueryClientProvider client={client}>
-                  <Blog />
-                </QueryClientProvider>
-              }
-            />
-            <Route
-              path="read/:id"
-              element={
-                <QueryClientProvider client={client}>
-                  <ReadPage />
-                </QueryClientProvider>
-              }
-            />
+            <Route path="blog" element={<Blog />} />
+            <Route path="read/:id" element={<ReadPage />} />
           </Routes>
           <Outlet />
         </div>
