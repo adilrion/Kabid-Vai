@@ -13,6 +13,8 @@ import "./Works.css";
 
 const Works = () => {
   pageTitle("Art");
+  const [item, setItem] = useState("");
+  console.log(item);
 
   const { data, isLoading, isError, error } = useQuery(["art"], () => getArt());
 
@@ -45,45 +47,48 @@ const Works = () => {
               className="search-input"
               type="text"
               name=""
+              onChange={(e) => setItem(e.target.value)}
               placeholder="Search by Artworks, gallery, theme.."
             />
-            <a href="#" className="search-btn">
+            <button type="submit" className="search-btn">
               <p className="fa-search">
                 <BsSearch />
               </p>
-            </a>
+            </button>
           </div>
         </nav>
 
         <div className="grid grid-cols-4 grid-flow-row-dense gap-1 md:gap-3 relative m-2">
-          {data?.map((data, index) => {
-            return (
-              <Zoom>
-                <div
-                  key={data?._id}
-                  className={`${
-                    index % 2 === 0
-                      ? "col-span-4 md:col-span-1"
-                      : "col-span-4 md:col-span-2"
-                  } w-full h-auto art-section  bg-transparent`}
-                  onClick={() => {
-                    setVisible(true);
-                    setActiveIndex(index);
-                  }}
-                >
-                  <img
-                    src={data?.art_img}
-                    alt="#"
-                    className="w-full h-full object-center object-cover aspect-video  art-images "
-                  />
+          {data
+            ?.filter((art) => art?.title.toLowerCase().includes(item))
+            .map((data, index) => {
+              return (
+                <Zoom>
+                  <div
+                    key={data?._id}
+                    className={`${
+                      index % 2 === 0
+                        ? "col-span-4 md:col-span-1"
+                        : "col-span-4 md:col-span-2"
+                    } w-full h-auto max-h-[450px] art-section  bg-transparent`}
+                    onClick={() => {
+                      setVisible(true);
+                      setActiveIndex(index);
+                    }}
+                  >
+                    <img
+                      src={data?.art_img}
+                      alt="#"
+                      className="w-full h-full object-center object-cover aspect-video  art-images "
+                    />
 
-                  <div class="">
-                    <p class="text">{data.title}</p>
+                    <div class="">
+                      <p class="text">{data.title}</p>
+                    </div>
                   </div>
-                </div>
-              </Zoom>
-            );
-          })}
+                </Zoom>
+              );
+            })}
           <Viewer
             visible={visible}
             onClose={() => {

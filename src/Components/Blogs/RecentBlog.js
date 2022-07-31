@@ -31,15 +31,6 @@ const RecentBlog = () => {
 
   return (
     <section className="relative">
-      <div className="px-2 sticky top-0 py-2 r-header">
-        <div className="src-bar">
-          <SrcBar />
-        </div>
-        <header className="border-b py-2 mt-2">
-          <h3 className="text-gray-700">Recent post</h3>
-        </header>
-      </div>
-
       <article className="mt-4 mx-2 overflow-y-auto min-h-screen">
         {data?.slice(0, 10).map((data, index) => {
           return (
