@@ -45,14 +45,18 @@ const Works = () => {
     <section>
       <article>
         <nav className="px-2 w-full md:flex justify-center items-center">
-          <div className=" sticky top-0  z-40 pt-2">
+          <div className="z-40 pt-2">
             <div className="md:w-[450px]">
-              <SrcBar post={post} setSrcResult={setSrcResult} />
+              <SrcBar
+                post={post}
+                setSrcResult={setSrcResult}
+                placeholder="Search by Art works, gallery.."
+              />
             </div>
           </div>
         </nav>
 
-        <div className="grid grid-cols-4 grid-flow-row-dense gap-2 md:gap-3 relative m-2">
+        <div className="grid grid-cols-4 grid-flow-row-dense gap-2 relative m-2">
           {srcResult?.map((data, index) => {
             return (
               <Zoom>

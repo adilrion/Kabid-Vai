@@ -7,12 +7,10 @@
 
 .art-images {
   transition: all 0.9s ease-in-out;
-  /* border-radius: 2px; */
 }
 .art-section:hover .art-images {
   transform: scale(1.01);
   cursor: pointer;
-  /* border-radius: 2px; */
 }
 
 .text {

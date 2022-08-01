@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import moment from "moment";
 
@@ -11,19 +10,17 @@ import {
 } from "react-icons/bs";
 
 import { Link, useParams } from "react-router-dom";
-import { getBlog, getSingleBlog } from "../Hooks/getApi";
 import useServer from "../Hooks/useServer";
 import Spinner from "../Utils/Spinner";
 import "./Blog.css";
 import RecentBlog from "./RecentBlog";
 import { pageTitle } from "../Utils/Title";
-import SrcBar from "../Utils/SrcBar";
 
 const ReadPage = () => {
   const { id } = useParams();
   const { data, isLoading, isError, error } = useServer(id);
 
-  pageTitle(`${data?.title}`);
+  pageTitle(`${data?.title || ""}`);
 
   if (isLoading) {
     return (

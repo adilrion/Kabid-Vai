@@ -141,7 +141,11 @@ const Blog = () => {
             <div className="mx-5 md:mx-0 ">
               <div className="px-2 sticky top-0 r-header z-40 pt-2">
                 <div className="src-bar">
-                  <SrcBar post={post} setSrcResult={setSrcResult} />
+                  <SrcBar
+                    post={post}
+                    setSrcResult={setSrcResult}
+                    placeholder="Search blog .."
+                  />
                 </div>
                 <header className="border-b py-2 mt-2">
                   <h3 className="text-gray-700">Recent post</h3>

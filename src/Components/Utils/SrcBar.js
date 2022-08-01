@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Utils.css";
 import { BiSearchAlt2 } from "react-icons/bi";
 
-const SrcBar = ({ post, setSrcResult }) => {
+const SrcBar = ({ post, setSrcResult, placeholder }) => {
   const HandleOnSubmit = (e) => {
     e.preventDefault();
   };
@@ -26,7 +26,7 @@ const SrcBar = ({ post, setSrcResult }) => {
             className="b-search-input"
             type="text"
             defaultValue=""
-            placeholder="Search.."
+            placeholder={placeholder}
             onChange={HandleOnChange}
           />
           <button className="b-search-btn">
