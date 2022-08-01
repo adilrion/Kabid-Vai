@@ -22,6 +22,7 @@ const Blog = () => {
   );
   useEffect(() => {
     setPost(data);
+    setSrcResult(data);
   }, [data]);
 
   console.log(srcResult);

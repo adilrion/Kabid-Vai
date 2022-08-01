@@ -12,7 +12,7 @@ const SrcBar = ({ post, setSrcResult }) => {
       return setSrcResult(post);
     } else {
       const srcResult = post.filter((post) =>
-        post?.title?.toLowerCase().includes(e.target.value)
+        post?.title?.toLowerCase().includes(e.target.value.toLowerCase())
       );
       setSrcResult(srcResult);
     }
@@ -25,6 +25,7 @@ const SrcBar = ({ post, setSrcResult }) => {
           <input
             className="b-search-input"
             type="text"
+            defaultValue=""
             placeholder="Search.."
             onChange={HandleOnChange}
           />

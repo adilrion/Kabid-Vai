@@ -14,7 +14,7 @@ const Navigation = () => {
 
   return (
     <section>
-      <div className="xl:grid grid-cols-12 gap-x-2 relative z-50">
+      <div className="xl:grid grid-cols-12 relative z-50">
         <div className="sm:col-span-12 xl:col-span-2 navigation">
           <nav className="relative sticky top-0 z-50">
             <div className=" xl:hidden flex justify-between h-[8vh] p-6 items-center bg-white bg-transparent">
@@ -107,7 +107,7 @@ const Navigation = () => {
               id="Main"
               className={`${
                 show ? "translate-x-0" : "-translate-x-full"
-              } xl: transform  xl:translate-x-0  ease-in-out transition duration-500 flex justify-start items-start h-[92vh]  md:h-[100vh]  w-full sm:w-64  flex-col shadow navigation absolute z-50 bg-white `}
+              } xl: transform  xl:translate-x-0  ease-in-out transition duration-500 flex justify-start items-start h-[92vh]  md:h-[100vh]  w-full  flex-col shadow navigation absolute z-50 bg-white `}
             >
               <div className="hidden xl:block xl:flex flex-col items-center py-5 mx-5  border-gray-400 border-b">
                 <div className="">

@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { getBlog } from "../Hooks/getApi";
 import Spinner from "../Utils/Spinner";
-import SrcBar from "../Utils/SrcBar";
 import "./Blog.css";
 
 const RecentBlog = () => {

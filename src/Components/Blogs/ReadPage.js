@@ -1,28 +1,29 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
+import moment from "moment";
+
 import {
   BsFacebook,
-  BsGithub,
   BsInstagram,
   BsPinterest,
   BsTwitter,
   BsLinkedin,
 } from "react-icons/bs";
 
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getBlog, getSingleBlog } from "../Hooks/getApi";
 import useServer from "../Hooks/useServer";
 import Spinner from "../Utils/Spinner";
 import "./Blog.css";
 import RecentBlog from "./RecentBlog";
+import { pageTitle } from "../Utils/Title";
+import SrcBar from "../Utils/SrcBar";
 
 const ReadPage = () => {
-  // const { title, img, des, _id } = useLocation().state.data;
-  // console.log(useLocation().state.data);
-
   const { id } = useParams();
   const { data, isLoading, isError, error } = useServer(id);
-  console.log(data);
+
+  pageTitle(`${data?.title}`);
 
   if (isLoading) {
     return (
@@ -49,8 +50,11 @@ const ReadPage = () => {
           className="w-full object-cover rounded-b"
         />
         <div className="b-card-title p-5 md:p-8 w-[96%]  md:w-[80%] lg:w-[50%] absolute bottom-2 md:bottom-3 md:left-3 lg:bottom-10   lg:left-10 rounded">
-          <span className="text-xsm text-gray-600">
-            <time dateTime="2001-05-15T19:00">15 May 2022</time>
+          <span className="text-xsm text-gray-500 inline-flex items-baseline gap-2">
+            <p>{moment(data?.createdAt).format("ll")}</p>{" "}
+            <span className="text-[10px]">
+              ({moment(data?.createdAt, "YYYYMMDD").fromNow()})
+            </span>
           </span>
           <p className="text-[#292929] leading-8 mb-2 text-xl md:text-2xl font-semibold">
             {data?.title || ".."}
@@ -111,6 +115,11 @@ const ReadPage = () => {
           </div>
         </section>
         <aside className=" col-span-12 lg:col-span-4 w-full mx-5 md:mx-0">
+          <div className="px-2 sticky top-0 r-header z-40 pt-2">
+            <header className="border-b py-2 mt-2">
+              <h3 className="text-gray-700">Recent post</h3>
+            </header>
+          </div>
           <div className="r-b-header">
             <RecentBlog />
           </div>

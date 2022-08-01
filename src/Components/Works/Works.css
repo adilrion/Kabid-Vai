@@ -60,27 +60,17 @@
 }
 
 .text {
-  position: absolute;
   font-family: "Delius", cursive;
-  bottom: 0%;
-  left: 50%;
-  transition: 0.6s;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
   cursor: pointer;
   font-weight: 500;
   text-transform: capitalize;
   color: #d6d6d6;
   font-size: 1rem;
+  display: none;
+  transition: all 0.9s ease-in-out;
 }
 .art-section:hover .text {
   font-size: 1.3rem;
   padding: 0;
-  width: fit-content;
-  height: fit-content;
-  margin: 0%;
-  bottom: 0%;
-  left: 50%;
+  display: block;
 }

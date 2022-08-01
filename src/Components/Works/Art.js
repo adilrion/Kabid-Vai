@@ -60,7 +60,9 @@ const Works = () => {
 
         <div className="grid grid-cols-4 grid-flow-row-dense gap-1 md:gap-3 relative m-2">
           {data
-            ?.filter((art) => art?.title.toLowerCase().includes(item))
+            ?.filter((art) =>
+              art?.title.toLowerCase().includes(item.toLowerCase())
+            )
             .map((data, index) => {
               return (
                 <Zoom>
@@ -70,7 +72,7 @@ const Works = () => {
                       index % 2 === 0
                         ? "col-span-4 md:col-span-1"
                         : "col-span-4 md:col-span-2"
-                    } w-full h-auto max-h-[450px] art-section  bg-transparent`}
+                    } w-full h-full max-h-[450px] art-section  bg-transparent`}
                     onClick={() => {
                       setVisible(true);
                       setActiveIndex(index);
@@ -83,7 +85,9 @@ const Works = () => {
                     />
 
                     <div class="">
-                      <p class="text">{data.title}</p>
+                      <p class="absolute bottom-[5px] left-2/4 -translate-x-2/4 w-full text-center  text-md text">
+                        {data.title}
+                      </p>
                     </div>
                   </div>
                 </Zoom>
