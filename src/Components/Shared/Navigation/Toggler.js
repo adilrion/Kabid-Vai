@@ -5,7 +5,10 @@ const Toggler = ({ setShow, show }) => {
   return (
     <div>
       <div className="w-fit bg-transparent  flex justify-between p-[0.5rem] items-center bg-white">
-        <div aria-label="toggler" className="flex justify-center items-center">
+        <div
+          aria-label="toggler"
+          className="flex justify-center items-center  "
+        >
           <button
             aria-label="open"
             id="open"

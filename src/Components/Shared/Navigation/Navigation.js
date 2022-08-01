@@ -12,7 +12,6 @@ import "./Navigation.css";
 import Toggler from "./Toggler";
 const Navigation = () => {
   const [show, setShow] = useState(false);
-  console.log(show);
 
   return (
     <section>
@@ -114,28 +113,31 @@ const Navigation = () => {
                 </button>
               </div>
             </div>
+            <div></div>
             <div
               id="Main"
               className={`${
                 show ? "translate-x-0 " : "-translate-x-full hidden"
-              } xl: transform  xl:translate-x-0  ease-in-out transition duration-500 flex justify-start items-start h-[92vh] md:h-screen    flex-col shadow navigation absolute z-50 bg-white w-fit `}
+              } xl: transform  xl:translate-x-0   transition duration-500 ease-in-out flex justify-start items-start h-[92vh] md:h-screen    flex-col shadow navigation absolute z-50 bg-white w-full`}
             >
-              <div className="hidden md:block xl:flex flex-col items-center py-5 mx-5  border-gray-400 border-b">
-                <div className="">
-                  <img
-                    src={man}
-                    alt="Images of Kabid Hossain"
-                    className="img rainbow text-center shadow"
-                  />
+              <div className="hidden w-[100%] md:block md:flex px-4 flex-col items-center  justify-center">
+                <div className="border-gray-400 border-b  w-full flex justify-center flex-col items-center p-5">
+                  <div>
+                    <img
+                      src={man}
+                      alt="Images of Kabid Hossain"
+                      className="w-[170px] h-[170px] p-[10px] overflow-hidden rounded-full bg-white mb-[10px] text-center shadow"
+                    />
+                  </div>
+                  <Link
+                    to="/home"
+                    className="leading-8 text-4xl font-semibold text-gray-700 text-center pt-5"
+                  >
+                    <span className="">Kabid</span> Hassan
+                  </Link>
                 </div>
-                <Link
-                  to="/home"
-                  className="leading-8 text-4xl font-semibold text-gray-700 text-center pt-5"
-                >
-                  <span className="">Kabid</span> Hassan
-                </Link>
               </div>
-              <div className="mt-3 md:mt-[3.5rem] flex flex-col justify-start items-center  pl-4 w-full   space-y-6 pb-5 ">
+              <div className="mt-3 md:mt-[1rem] flex flex-col justify-start items-center  pl-4 w-full   space-y-6 pb-5 ">
                 <Link
                   to="/art"
                   onClick={() => setShow(false)}
@@ -213,7 +215,7 @@ const Navigation = () => {
             </div>
           </nav>
         </div>
-        <div className="col-span-10 min-h-screen">
+        <div className="col-span-10 min-h-screen ">
           <Routes>
             <Route path="/" element={<Works />} />
             <Route path="home" element={<Works />} />

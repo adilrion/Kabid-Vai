@@ -44,7 +44,7 @@ const About = () => {
         <div>
           <div className="grid grid-cols-2 md:min-h-[540px] md:p-10 relative">
             <div className="col-span-2 order-last md:order-first md:col-span-1 h-auto relative flex justify-evenly items-center mx-5 pb-5 md:pb-0">
-              <div className="w-full flex flex-col justify-evenly items-center ">
+              <div className="w-full flex flex-col justify-evenly items-center pb-5 md:pb-0">
                 <Link to="#" className=" a-skill shadow ">
                   <p>Illustrator </p>
                 </Link>
@@ -88,7 +88,7 @@ const About = () => {
               </Zoom>
             </div>
             <div className="col-span-2 md:col-span-1 pb-5 md:pb-0 h-auto relative flex justify-evenly items-center mx-5">
-              <div className="w-full flex flex-col justify-evenly bg-transparent items-center ">
+              <div className="w-full flex flex-col justify-evenly bg-transparent items-center pb-5 md:pb-0">
                 <Link to="#" className=" a-skill shadow">
                   <p>Researcher</p>
                 </Link>
@@ -108,7 +108,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:min-h-[540px] mt-20 md:mt-0 md:p-10 relative mb-10">
+          <div className="grid grid-cols-2 md:min-h-[540px]  md:py-5 md:px-10 relative mb-10">
             <div className="col-span-2 order-last md:order-first md:col-span-1 h-auto relative flex justify-evenly items-center mx-5 bg-transparent">
               <div className="w-full flex flex-col justify-evenly bg-transparent items-center ">
                 <Fade bottom cascade>

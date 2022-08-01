@@ -25,7 +25,6 @@ const Blog = () => {
     setSrcResult(data);
   }, [data]);
 
-  console.log(srcResult);
 
   // Pagination Function
 
@@ -65,7 +64,7 @@ const Blog = () => {
     <section className="blog-section">
       <article>
         {/* Bottom Blog Section */}
-        <section className="grid grid-cols-12 gap-5 sm:mx-2 md:mx-2">
+        <section className="grid grid-cols-12 gap-5 sm:mx-2 mx-2">
           <section className="col-span-12 lg:col-span-8  pt-2">
             <div>
               {currentItems?.length !== -0 ? (

@@ -56,7 +56,7 @@ const ReadPage = () => {
         </div>
       </section>
 
-      <article className="grid grid-cols-12 gap-5 mt-2 mx-2">
+      <article className="grid grid-cols-12 gap-5 mt-2 mx-2 md:mx-0">
         <section className="col-span-12 lg:col-span-8">
           <div>
             <div
