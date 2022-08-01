@@ -15,7 +15,7 @@ const Navigation = () => {
 
   return (
     <section>
-      <div className="hidden md:block z-[100] absolute left-1 top-1 bg-transparent">
+      <div className="hidden md:block z-[100] absolute lg:fixed left-1 top-1 bg-transparent">
         <Toggler setShow={setShow} show={show} />
       </div>
       <div

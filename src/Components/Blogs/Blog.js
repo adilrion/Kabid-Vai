@@ -25,7 +25,6 @@ const Blog = () => {
     setSrcResult(data);
   }, [data]);
 
-
   // Pagination Function
 
   const itemsPerPage = 5;
@@ -63,7 +62,17 @@ const Blog = () => {
   return (
     <section className="blog-section">
       <article>
-        {/* Bottom Blog Section */}
+        <nav className="px-2 w-full md:flex justify-center items-center lg:hidden">
+          <div className="z-40 pt-2">
+            <div className="md:w-[450px]">
+              <SrcBar
+                post={post}
+                setSrcResult={setSrcResult}
+                placeholder="Search Blog.."
+              />
+            </div>
+          </div>
+        </nav>
         <section className="grid grid-cols-12 gap-5 sm:mx-2 mx-2">
           <section className="col-span-12 lg:col-span-8  pt-2">
             <div>
@@ -140,7 +149,7 @@ const Blog = () => {
           <aside className=" col-span-12 lg:col-span-4 w-full">
             <div className="mx-5 md:mx-0 ">
               <div className="px-2 sticky top-0 r-header z-40 pt-2">
-                <div className="src-bar">
+                <div className="src-bar hidden lg:block">
                   <SrcBar
                     post={post}
                     setSrcResult={setSrcResult}
