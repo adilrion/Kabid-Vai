@@ -47,7 +47,7 @@ const Blog = () => {
 
   if (isLoading) {
     return (
-      <div className="absolute  top-1/4 left-2/4 w-12 h-12 bg-gray-50 shadow rounded-full flex justify-center items-center">
+      <div className="absolute top-1/4 left-2/4 w-12 h-12 bg-gray-50 shadow rounded-full flex justify-center items-center">
         <Spinner />
       </div>
     );
@@ -113,8 +113,9 @@ const Blog = () => {
                   );
                 })
               ) : (
-                <article>
-                  <p>Result Not Found</p>
+                <article className="m-2 w-screen text-gray-500">
+                  {" "}
+                  <p>Result not found:</p>
                 </article>
               )}
             </div>

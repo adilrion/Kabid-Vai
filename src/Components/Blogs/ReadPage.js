@@ -41,11 +41,7 @@ const ReadPage = () => {
   return (
     <section>
       <section className="b-card relative rounded-b flex justify-center shadow-md ">
-        <img
-          src={data?.cover_img}
-          alt=""
-          className="w-full object-cover rounded-b"
-        />
+        <img src={data?.cover_img} alt="" className="w-full object-cover " />
         <div className="b-card-title p-5 md:p-8 w-[96%]  md:w-[80%] lg:w-[50%] absolute bottom-2 md:bottom-3 md:left-3 lg:bottom-10   lg:left-10 rounded">
           <span className="text-xsm text-gray-500 inline-flex items-baseline gap-2">
             <p>{moment(data?.createdAt).format("ll")}</p>{" "}
@@ -60,7 +56,7 @@ const ReadPage = () => {
         </div>
       </section>
 
-      <article className="grid grid-cols-12 gap-5 mt-8 sm:mx-2 md:mx-8">
+      <article className="grid grid-cols-12 gap-5 mt-2 mx-2">
         <section className="col-span-12 lg:col-span-8">
           <div>
             <div
@@ -69,12 +65,12 @@ const ReadPage = () => {
             />
           </div>
           {/* Sharing section */}
-          <div className="w-full flex justify-center ">
+          <div className="w-full flex  justify-center ">
             <section className="sharing-section  p-7 mt-10 rounded-md">
               <p className="text-2xl text-gray-400 border-b pb-2">
                 Share this blog
               </p>
-              <div className="flex justify-evenly my-[15px] gap-10">
+              <div className="flex flex-wrap justify-evenly my-[15px] gap-5">
                 <Link
                   to="#"
                   className="text-3xl h-fit p-4 rounded-full  border hover:border-[#3b5998] text-[#3b5998] transition ease-in-out duration-300"

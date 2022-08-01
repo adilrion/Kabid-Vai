@@ -57,36 +57,44 @@ const Works = () => {
         </nav>
 
         <div className="grid grid-cols-4 grid-flow-row-dense gap-2 relative m-2">
-          {srcResult?.map((data, index) => {
-            return (
-              <Zoom>
-                <div
-                  key={data?._id}
-                  className={`${
-                    index % 2 === 0
-                      ? "col-span-4 md:col-span-1"
-                      : "col-span-4 md:col-span-2"
-                  } w-full h-full max-h-[450px] art-section  bg-transparent`}
-                  onClick={() => {
-                    setVisible(true);
-                    setActiveIndex(index);
-                  }}
-                >
-                  <img
-                    src={data?.art_img}
-                    alt="#"
-                    className="w-full h-full object-center object-cover aspect-video  art-images "
-                  />
+          {srcResult?.length !== 0 ? (
+            srcResult?.map((data, index) => {
+              return (
+                <Zoom>
+                  <div
+                    key={data?._id}
+                    className={`${
+                      index % 2 === 0
+                        ? "col-span-4 md:col-span-1"
+                        : "col-span-4 md:col-span-2"
+                    } w-full h-full max-h-[450px] art-section  bg-transparent`}
+                    onClick={() => {
+                      setVisible(true);
+                      setActiveIndex(index);
+                    }}
+                  >
+                    <img
+                      src={data?.art_img}
+                      alt="#"
+                      className="w-full h-full object-center object-cover aspect-video  art-images "
+                    />
 
-                  <div class="">
-                    <p class="absolute bottom-[5px] left-2/4 -translate-x-2/4 w-full text-center  text-md text">
-                      {data.title}
-                    </p>
+                    <div class="">
+                      <p class="absolute bottom-[5px] left-2/4 -translate-x-2/4 w-full text-center  text-md text">
+                        {data.title}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Zoom>
-            );
-          })}
+                </Zoom>
+              );
+            })
+          ) : (
+            <article className="m-2 w-screen text-gray-500">
+              {" "}
+              <p>Result not found:</p>
+            </article>
+          )}
+
           <Viewer
             visible={visible}
             onClose={() => {

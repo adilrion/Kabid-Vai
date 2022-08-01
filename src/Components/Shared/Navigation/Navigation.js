@@ -9,21 +9,32 @@ import "../../Home/Version/Version.css";
 import Works from "../../Works/Art";
 import man from "../../Shared/Images/man.png";
 import "./Navigation.css";
+import Toggler from "./Toggler";
 const Navigation = () => {
   const [show, setShow] = useState(false);
+  console.log(show);
 
   return (
     <section>
-      <div className="xl:grid grid-cols-12 relative z-50">
+      <div className="hidden md:block z-[100] absolute left-1 top-1 bg-transparent">
+        <Toggler setShow={setShow} show={show} />
+      </div>
+      <div
+        className={`${
+          show ? "xl:grid grid-cols-12" : "container mx-auto"
+        }  relative z-50`}
+      >
         <div className="sm:col-span-12 xl:col-span-2 navigation">
-          <nav className="relative sticky top-0 z-50">
-            <div className=" xl:hidden flex justify-between h-[8vh] p-6 items-center bg-white bg-transparent">
-              <div className="flex justify-between  items-center space-x-3">
-                <img
-                  className="rounded-full w-[20px] h-[20px]"
-                  src={man}
-                  alt="kabid Hassan photos"
-                />
+          <nav className="relative sticky top-0 z-[90]">
+            <div className="flex justify-between h-[8vh] py-6 px-3 items-center bg-white md:hidden">
+              <div className="flex justify-between  items-center space-x-3 xl:hidden block ">
+                <div className="shadow p-2 rounded-full">
+                  <img
+                    className=" w-[20px] h-[20px] "
+                    src={man}
+                    alt="kabid Hassan photos"
+                  />
+                </div>
                 <p className="text-2xl font-bold leading-6 text-gray-800">
                   Kabid hassan
                 </p>
@@ -106,10 +117,10 @@ const Navigation = () => {
             <div
               id="Main"
               className={`${
-                show ? "translate-x-0" : "-translate-x-full"
-              } xl: transform  xl:translate-x-0  ease-in-out transition duration-500 flex justify-start items-start h-[92vh]  md:h-[100vh]  w-full  flex-col shadow navigation absolute z-50 bg-white `}
+                show ? "translate-x-0 " : "-translate-x-full hidden"
+              } xl: transform  xl:translate-x-0  ease-in-out transition duration-500 flex justify-start items-start h-[92vh] md:h-screen    flex-col shadow navigation absolute z-50 bg-white w-fit `}
             >
-              <div className="hidden xl:block xl:flex flex-col items-center py-5 mx-5  border-gray-400 border-b">
+              <div className="hidden md:block xl:flex flex-col items-center py-5 mx-5  border-gray-400 border-b">
                 <div className="">
                   <img
                     src={man}
@@ -124,7 +135,7 @@ const Navigation = () => {
                   <span className="">Kabid</span> Hassan
                 </Link>
               </div>
-              <div className="mt-6 flex flex-col justify-start items-center  pl-4 w-full   space-y-6 pb-5 ">
+              <div className="mt-3 md:mt-[3.5rem] flex flex-col justify-start items-center  pl-4 w-full   space-y-6 pb-5 ">
                 <Link
                   to="/art"
                   onClick={() => setShow(false)}

@@ -43,7 +43,7 @@ const Contact = () => {
 
   return (
     <section className="relative">
-      <nav className="fixed top-2/4 left-2/4 -translate-x-2/4 -z-50 text-2xl md:text-4xl text-gray-200 bg-transparent">
+      <nav className="fixed top-2/4 left-2/4 -translate-x-2/4 -z-50 text-md text-center md:text-2xl lg:text-4xl text-gray-200 bg-transparent">
         <h1 className="">
           <span className=" uppercase">Contact Me!</span>
         </h1>
@@ -68,7 +68,7 @@ const Contact = () => {
           <div className="col-span-1 order-last md:order-first">
             <Fade bottom cascade>
               <div class="md:p-6 flex flex-col justify-center">
-                <div className="mb-5 text-3xl">
+                <div className="my-5 text-3xl">
                   <p>
                     Drop Us a <span className="">Massage!</span>
                   </p>
@@ -149,7 +149,7 @@ const Contact = () => {
             </Fade>
             <div className="col-span-1 p-5 z-50">
               <Fade bottom cascade>
-                <div class="md:p-6 flex flex-col justify-center gap-y-3 md:gap-y-3 ">
+                <div class="md:p-6 flex flex-col justify-center gap-y-3 md:gap-y-5 ">
                   <address className="c-address">
                     <p className="c-address-icon">
                       <ImLocation2 />
@@ -176,7 +176,7 @@ const Contact = () => {
                     <p>kabidhasan@gmail.com</p>
                   </div>
                   <div>
-                    <div className="flex justify-evenly m-[15px] md:px-5">
+                    <div className="flex justify-evenly m-[15px] md:px-16">
                       <Link
                         to="#"
                         className=" text-2xl  shadow-md border bg-white border-gray-100  rounded-full p-4 text-[#3b5998] transition ease-in-out duration-300"

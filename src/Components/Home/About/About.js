@@ -13,9 +13,11 @@ const About = () => {
   return (
     <article>
       <section className="c-about md:px-10">
-        <nav className="fixed top-2/4 left-2/4 -translate-x-2/4 -z-50 text-2xl md:text-4xl text-gray-200 bg-transparent">
+        <nav className="fixed top-2/4 left-2/4 -translate-x-2/4 -z-50 text-md text-center md:text-2xl lg:text-4xl text-gray-200 bg-transparent">
           <h1 className="">
-            <span className="uppercase">About Me!😎</span>
+            <span className=" uppercase ">
+              About Me!<span className="opacity-50">😎</span>
+            </span>
           </h1>
         </nav>
 

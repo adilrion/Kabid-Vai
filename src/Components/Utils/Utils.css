@@ -18,7 +18,7 @@
   width: calc(100% - 60px);
   outline: none;
   transition: 0.4s;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Delius", cursive;
 }
 .b-search-btn {
