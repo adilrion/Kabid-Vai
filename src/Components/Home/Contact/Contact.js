@@ -43,7 +43,7 @@ const Contact = () => {
 
   return (
     <section className="relative">
-      <nav className="c-header z-40">
+      <nav className="fixed top-2/4 left-2/4 -translate-x-2/4 -z-50 text-2xl md:text-4xl text-gray-200 bg-transparent">
         <h1 className="">
           <span className=" uppercase">Contact Me!</span>
         </h1>
@@ -51,7 +51,7 @@ const Contact = () => {
 
       <div className="c-contact">
         <div className="c-header-details">
-          <div className="md:w-[600px] py-5 border-gray-400 border-b mx-8 md:mx-24">
+          <div className="md:w-[600px] py-5 border-gray-300 border-b mx-8 md:mx-24">
             <Zoom>
               <h1>DON'T BE SHY</h1>
             </Zoom>
@@ -84,7 +84,7 @@ const Contact = () => {
                       name="name"
                       id="name"
                       placeholder="Full Name"
-                      class="w-100 mt-2 py-2 px-3 rounded shadow text-md border  min-h-full text-gray-800 focus:outline-none -transparent"
+                      class="w-100 mt-2 py-3 px-3 rounded shadow text-md   min-h-full text-gray-800 focus:outline-none -transparent"
                     />
                   </div>
 
@@ -97,7 +97,7 @@ const Contact = () => {
                       name="email"
                       id="email"
                       placeholder="Email"
-                      class="w-100 mt-2 py-2 px-3 rounded    shadow text-md border  min-h-full text-gray-800 focus:outline-none -transparent"
+                      class="w-100 mt-2 py-3 px-3 rounded    shadow text-md  min-h-full text-gray-800 focus:outline-none -transparent"
                     />
                   </div>
 
@@ -110,13 +110,13 @@ const Contact = () => {
                       name="message"
                       id="text"
                       placeholder="Type your message"
-                      class="w-100 mt-2 py-2 px-3 min-h-[200px] rounded    shadow text-md border  min-h-full text-gray-800 focus:outline-none -transparent"
+                      class="w-100 mt-2 py-3 px-3 min-h-[200px] rounded    shadow text-md    text-gray-800 focus:outline-none -transparent"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    class="w-full bg-[#3f3d56] text-white font-bold py-3 px-6 rounded mt-3 hover:-[#5a5a5a]  transition ease-in-out duration-300"
+                    class="w-full uppercase bg-[#3f3d56] text-white font-bold py-3 px-6 rounded mt-3 hover:-[#5a5a5a]  transition ease-in-out duration-300"
                   >
                     Send
                   </button>
@@ -149,7 +149,7 @@ const Contact = () => {
             </Fade>
             <div className="col-span-1 p-5 z-50">
               <Fade bottom cascade>
-                <div class="md:p-6 flex flex-col justify-center c-address-section gap-y-2 md:gap-y-2 ">
+                <div class="md:p-6 flex flex-col justify-center gap-y-3 md:gap-y-3 ">
                   <address className="c-address">
                     <p className="c-address-icon">
                       <ImLocation2 />
@@ -176,7 +176,7 @@ const Contact = () => {
                     <p>kabidhasan@gmail.com</p>
                   </div>
                   <div>
-                    <div className="flex justify-evenly m-[15px]">
+                    <div className="flex justify-evenly m-[15px] md:px-5">
                       <Link
                         to="#"
                         className=" text-2xl  shadow-md border bg-white border-gray-100  rounded-full p-4 text-[#3b5998] transition ease-in-out duration-300"

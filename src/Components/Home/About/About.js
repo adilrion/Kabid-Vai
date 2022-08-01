@@ -13,7 +13,7 @@ const About = () => {
   return (
     <article>
       <section className="c-about md:px-10">
-        <nav className="c-header">
+        <nav className="fixed top-2/4 left-2/4 -translate-x-2/4 -z-50 text-2xl md:text-4xl text-gray-200 bg-transparent">
           <h1 className="">
             <span className="uppercase">About Me!😎</span>
           </h1>
@@ -41,7 +41,7 @@ const About = () => {
         </div>
         <div>
           <div className="grid grid-cols-2 md:min-h-[540px] md:p-10 relative">
-            <div className="col-span-2 order-last md:order-first md:col-span-1 h-auto relative flex justify-evenly items-center mx-5">
+            <div className="col-span-2 order-last md:order-first md:col-span-1 h-auto relative flex justify-evenly items-center mx-5 pb-5 md:pb-0">
               <div className="w-full flex flex-col justify-evenly items-center ">
                 <Link to="#" className=" a-skill shadow ">
                   <p>Illustrator </p>
@@ -54,15 +54,13 @@ const About = () => {
                 </Link>
               </div>
 
-              <div className="a-bottom-icon">
+              <div className=" absolute bottom-0 left-2/4 -translate-x-2/4 a-bottom-icon">
                 <h1>
-                  <Zoom>
-                    <MdDoubleArrow />
-                  </Zoom>
+                  <MdDoubleArrow className="rotate-90 text-[#3f3d56] text-[70px]" />
                 </h1>
               </div>
             </div>
-            <div className="col-span-2 md:col-span-1 flex justify-center items-center">
+            <div className="col-span-2 md:col-span-1 flex justify-center items-center ">
               <Zoom>
                 <img
                   src={img1}
@@ -75,8 +73,8 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:min-h-[540px] mt-20 md:mt-0 md:p-10 relative">
-            <div className="col-span-2 md:col-span-1  flex justify-center items-center">
+          <div className="grid grid-cols-2 md:min-h-[540px] md:p-10 relative">
+            <div className="col-span-2 md:col-span-1  flex justify-center items-center pt-8 md:pt-0">
               <Zoom>
                 <img
                   src={img2}
@@ -87,7 +85,7 @@ const About = () => {
                 />
               </Zoom>
             </div>
-            <div className="col-span-2 md:col-span-1 h-auto relative flex justify-evenly items-center mx-5">
+            <div className="col-span-2 md:col-span-1 pb-5 md:pb-0 h-auto relative flex justify-evenly items-center mx-5">
               <div className="w-full flex flex-col justify-evenly bg-transparent items-center ">
                 <Link to="#" className=" a-skill shadow">
                   <p>Researcher</p>
@@ -100,9 +98,9 @@ const About = () => {
                 </Link>
               </div>
 
-              <div className="a-bottom-icon">
+              <div className=" absolute bottom-0 left-2/4 -translate-x-2/4 a-bottom-icon ">
                 <h1>
-                  <MdDoubleArrow />
+                  <MdDoubleArrow className="rotate-90 text-[#3f3d56] text-[70px]" />
                 </h1>
               </div>
             </div>
