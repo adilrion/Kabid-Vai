@@ -139,12 +139,4 @@
   .bottom-arrow-icon {
     display: none;
   }
-  .c-about {
-    margin: 0;
-    border-radius: 0;
-    border: 1px solid #e9e5e5;
-    box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.1),
-      0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-    background: rgb(255, 255, 255);
-  }
 }
