@@ -9,7 +9,7 @@
   transition: all 0.9s ease-in-out;
 }
 .art-section:hover .art-images {
-  transform: scale(1.01);
+  transform: scale(1.1);
   cursor: pointer;
 }
 
