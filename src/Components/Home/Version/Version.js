@@ -1,8 +1,7 @@
 import React from "react";
-import "./Version.css";
-import KabidImg from "../../Shared/Images/Kabid.jpg";
-import man from "../../Shared/Images/man.png";
 import { Link } from "react-router-dom";
+import man from "../../Shared/Images/man.png";
+import "./Version.css";
 
 const Version = () => {
   return (
@@ -13,11 +12,11 @@ const Version = () => {
             <div className="">
               <img
                 src={man}
-                alt="Images of Kabid Hossain"
+                alt="Images of Hardin Scott"
                 className="img rainbow shadow text-center"
               />
             </div>
-            <h1 className="">Kabid hossain</h1>
+            <h1 className="">Hardin Scott</h1>
           </div>
           <p className="md:w-[400px] py-2 intro">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,

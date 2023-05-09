@@ -6,8 +6,8 @@ import ReadPage from "../../Blogs/ReadPage";
 import About from "../../Home/About/About";
 import Contact from "../../Home/Contact/Contact";
 import "../../Home/Version/Version.css";
-import Works from "../../Works/Art";
 import man from "../../Shared/Images/man.png";
+import Works from "../../Works/Art";
 import "./Navigation.css";
 import Toggler from "./Toggler";
 const Navigation = () => {
@@ -31,11 +31,11 @@ const Navigation = () => {
                   <img
                     className=" w-[20px] h-[20px] "
                     src={man}
-                    alt="kabid Hassan photos"
+                    alt="Hardin Scott photos"
                   />
                 </div>
                 <p className="text-2xl font-bold leading-6 text-gray-800">
-                  Kabid hassan
+                  Hardin Scott
                 </p>
               </div>
               <div
@@ -125,7 +125,7 @@ const Navigation = () => {
                   <div>
                     <img
                       src={man}
-                      alt="Images of Kabid Hossain"
+                      alt="Images of Hardin Scott"
                       className="w-[170px] h-[170px] p-[10px] overflow-hidden rounded-full bg-white mb-[10px] text-center shadow"
                     />
                   </div>
@@ -133,7 +133,7 @@ const Navigation = () => {
                     to="/home"
                     className="leading-8 text-4xl font-semibold text-gray-700 text-center pt-5"
                   >
-                    <span className="">Kabid</span> Hassan
+                    <span className="">Hardin</span> Scott
                   </Link>
                 </div>
               </div>
@@ -207,7 +207,7 @@ const Navigation = () => {
                       </Link>
                     </div>
                     <div className="text-center mt-3 text-sm text-gray-400">
-                      <p>Copyright © 2022 Kabid Hassan</p>
+                      <p>Copyright © 2022 Hardin Scott</p>
                     </div>
                   </div>
                 </div>

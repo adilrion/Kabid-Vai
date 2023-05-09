@@ -173,7 +173,7 @@ const Contact = () => {
                     <p className="c-address-icon ">
                       <ImMail3 />
                     </p>
-                    <p>kabidhasan@gmail.com</p>
+                    <p>hardinscott@gmail.com</p>
                   </div>
                   <div>
                     <div className="flex justify-evenly m-[15px] md:px-16">

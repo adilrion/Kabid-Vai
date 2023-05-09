@@ -1,20 +1,20 @@
-import React from "react";
 import moment from "moment";
+import React from "react";
 
 import {
   BsFacebook,
   BsInstagram,
+  BsLinkedin,
   BsPinterest,
   BsTwitter,
-  BsLinkedin,
 } from "react-icons/bs";
 
 import { Link, useParams } from "react-router-dom";
 import useServer from "../Hooks/useServer";
 import Spinner from "../Utils/Spinner";
+import { pageTitle } from "../Utils/Title";
 import "./Blog.css";
 import RecentBlog from "./RecentBlog";
-import { pageTitle } from "../Utils/Title";
 
 const ReadPage = () => {
   const { id } = useParams();
@@ -52,7 +52,7 @@ const ReadPage = () => {
           <p className="text-[#292929] leading-8 mb-2 text-xl md:text-2xl font-semibold">
             {data?.title || ".."}
           </p>
-          <p className="text-xs text-gray-600">Kabid Hassan</p>
+          <p className="text-xs text-gray-600">Hardin Scott</p>
         </div>
       </section>
 

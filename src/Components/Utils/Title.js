@@ -1,3 +1,3 @@
 export const pageTitle = (newTitle) => {
-  return (document.title = `${newTitle} - Kabid Hassan`);
+  return (document.title = `${newTitle} - Hardin Scott`);
 };
